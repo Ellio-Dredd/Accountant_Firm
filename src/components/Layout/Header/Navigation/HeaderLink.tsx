@@ -29,7 +29,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     <div
       className="relative"
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave} 
+      onMouseLeave={handleMouseLeave}
     >
       <Link
         href={item.href}
