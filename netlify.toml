@@ -4,5 +4,4 @@
   functions = "netlify/functions"                # optional, for serverless functions
 
 [plugins]
-  [[plugins]]
     package = "@netlify/plugin-nextjs"
