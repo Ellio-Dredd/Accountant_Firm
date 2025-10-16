@@ -35,7 +35,7 @@ export default function BlogHome() {
   return (
     <div className="min-h-screen bg-base-200 pt-20">
       {/* ===============================
-          Section 1: Blog Previews
+          Section 1: Blog Preview
       =============================== */}
       <section className="py-10 sm:py-14 border-b border-base-300">
         <div className="container mx-auto px-4 sm:px-6 lg:max-w-screen-xl">
