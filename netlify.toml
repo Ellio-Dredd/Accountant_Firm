@@ -1,6 +1,8 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+  command   = "npm run build && npm run export"  # your build command
+  publish   = "out"                               # folder to deploy (for static export)
+  functions = "netlify/functions"                # optional, for serverless functions
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[plugins]
+  [[plugins]]
+    package = "@netlify/plugin-nextjs"
