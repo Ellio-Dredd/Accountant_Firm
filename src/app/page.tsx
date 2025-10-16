@@ -3,8 +3,9 @@ import Hero from "@/components/Home/Hero";
 import Companies from "@/components/Home/Companies";
 import Courses from "@/components/Home/Courses";
 import Mentor from "@/components/Home/Mentor";
-import Testimonial from "@/components/Home/Testimonials";
+import AboutUs from "@/components/Home/AboutUs/index";
 import Newsletter from "@/components/Home/Newsletter";
+import ContactUs from "@/components/Home/ContactUs/contactus";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "eLearning",
@@ -17,7 +18,8 @@ export default function Home() {
       <Companies />
       <Courses />
       <Mentor />
-      <Testimonial />
+      <AboutUs />
+      <ContactUs />
       <Newsletter />
     </main>
   );
