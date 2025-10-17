@@ -5,6 +5,10 @@ import { supabase } from "@/lib/supabaseClient";
 import { Blog } from "@/types/blog";
 import Link from "next/link";
 import Image from "next/image";
+import Slider from "react-slick";
+import { Icon } from "@iconify/react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -24,6 +28,48 @@ export default function BlogHome() {
     fetchBlogs();
   }, []);
 
+  const NextArrow = (props: any) => {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
+        onClick={onClick}
+      >
+        <Icon icon="solar:arrow-right-linear" className="text-2xl text-primary" />
+      </div>
+    );
+  };
+
+  const PrevArrow = (props: any) => {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
+        onClick={onClick}
+      >
+        <Icon icon="solar:arrow-left-linear" className="text-2xl text-primary" />
+      </div>
+    );
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false } },
+    ],
+  };
+
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen text-lg font-semibold text-primary">
@@ -33,57 +79,77 @@ export default function BlogHome() {
   }
 
   return (
-    <div className="min-h-screen bg-base-200 pt-20">
+    <div className="min-h-screen bg-gray-50 pt-20">
       {/* ===============================
-          Section 1: Blog Preview
+          Section 1: Blog Highlights (Slider)
       =============================== */}
-      <section className="py-10 sm:py-14 border-b border-base-300">
-        <div className="container mx-auto px-4 sm:px-6 lg:max-w-screen-xl">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-white">
-            Latest Blog Highlights
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+          <h1 className="flex items-center justify-center font-semibold text-3xl mb-10 text-gray-900">
+            Blog Highlights
           </h1>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-2 sm:mx-0">
+          <Slider {...sliderSettings}>
             {blogs.map((blog) => (
-              <Link
-                key={blog.id}
-                href={`#post-${blog.id}`}
-                scroll={true}
-                className="bg-white w-64 sm:w-72 flex-shrink-0 mx-2 sm:mr-6 rounded-2xl shadow-course-shadow hover:shadow-xl transition-shadow snap-start"
-              >
-                {blog.image_url && (
-                  <Image
-                    src={blog.image_url}
-                    alt={blog.title}
-                    width={300}
-                    height={180}
-                    className="rounded-t-2xl object-cover h-40 sm:h-44 w-full"
-                  />
-                )}
-                <div className="p-4">
-                  <h2 className="text-lg sm:text-xl font-semibold text-black line-clamp-2 mb-2">
-                    {blog.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 line-clamp-3">
-                    {blog.summary}
-                  </p>
-                  <button className="mt-4 btn btn-primary btn-sm w-full text-black">
-                    Read Post
-                  </button>
+              <div key={blog.id} className="px-3 pb-10">
+                <div
+                  className="bg-white rounded-2xl shadow-course-shadow hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col justify-between"
+                  style={{ height: "520px" }}
+                >
+                  <div className="relative h-48 flex items-center justify-center overflow-hidden">
+                    {blog.image_url ? (
+                      <Image
+                        src={blog.image_url}
+                        alt={blog.title}
+                        width={400}
+                        height={200}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center">
+                        <Icon icon="solar:document-text-linear" className="text-white text-5xl" />
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                  </div>
+
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                        {blog.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+                        {blog.summary || blog.content?.substring(0, 150) + "..."}
+                      </p>
+                      <p className="text-xs text-gray-500 mb-3">
+                        Published {new Date(blog.created_at || "").toLocaleDateString()}
+                      </p>
+                    </div>
+
+                    <div className="mt-auto">
+                      <Link
+                        href={`#post-${blog.id}`}
+                        scroll={true}
+                        className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300 text-sm"
+                      >
+                        Read Full Post
+                        <Icon icon="solar:arrow-right-linear" className="text-lg" />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
-            <div className="w-4 sm:w-6 flex-shrink-0" />
-          </div>
+          </Slider>
         </div>
       </section>
 
       {/* ===============================
-          Section 2: Full Blog Posts
+          Section 2: All Blog Posts (Full view)
       =============================== */}
-      <section className="py-10 sm:py-14">
+      <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:max-w-screen-lg">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center text-white">
+          <h2 className="text-3xl font-bold mb-10 text-center text-gray-900">
             All Blog Posts
           </h2>
 
@@ -91,7 +157,7 @@ export default function BlogHome() {
             <article
               key={blog.id}
               id={`post-${blog.id}`}
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-course-shadow mb-10 sm:mb-14 p-5 sm:p-8 scroll-mt-24"
+              className="bg-gray-50 rounded-2xl shadow-sm hover:shadow-md mb-12 p-6 transition-all duration-300 scroll-mt-24"
             >
               {blog.image_url && (
                 <Image
@@ -99,16 +165,14 @@ export default function BlogHome() {
                   alt={blog.title}
                   width={900}
                   height={400}
-                  className="rounded-2xl mb-4 sm:mb-6 w-full object-cover max-h-60 sm:max-h-96"
+                  className="rounded-xl mb-5 w-full object-cover max-h-96"
                 />
               )}
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-primary">
-                {blog.title}
-              </h2>
-              <div className="text-gray-500 text-sm sm:text-base mb-4 sm:mb-6">
+              <h2 className="text-2xl font-semibold mb-3 text-primary">{blog.title}</h2>
+              <div className="text-gray-500 text-sm mb-5">
                 Published {new Date(blog.created_at || "").toLocaleDateString()}
               </div>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line text-base">
                 {blog.content}
               </p>
             </article>
