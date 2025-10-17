@@ -53,7 +53,7 @@ const Mentor = () => {
               <div className="m-3 py-14 md:my-10 text-center">
                 <div className="relative">
                   <Image
-                    src={`${getImagePrefix()}${item.imgSrc}`}
+                    src={`${item.imgSrc}`}
                     alt="user-image"
                     width={306}
                     height={306}

@@ -41,7 +41,7 @@ const Hero = () => {
               {["Accurate", "Trustworthy", "Professional"].map((label, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <Image
-                    src={`${getImagePrefix()}images/banner/check-circle.svg`}
+                    src={"/images/banner/check-circle.svg"}
                     alt="check-icon"
                     width={30}
                     height={30}
@@ -58,7 +58,7 @@ const Hero = () => {
           {/* RIGHT SIDE IMAGE */}
           <div className="col-span-6 flex justify-center mt-10 lg:mt-0 lg:ml-16">
             <Image
-              src={`${getImagePrefix()}images/banner/accountImage.png`}
+              src={"/images/banner/accountImage.png"}
               alt="accounting-image"
               width={600}
               height={605}
