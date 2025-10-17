@@ -5,7 +5,7 @@ import Courses from "@/components/Home/Courses";
 import Mentor from "@/components/Home/Mentor";
 import AboutUs from "@/components/Home/AboutUs/index";
 import Newsletter from "@/components/Home/Newsletter";
-import ContactUs from "@/components/Home/ContactUs/contactus";
+import Services from "@/components/Home/Service/index"
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "eLearning",
@@ -18,8 +18,8 @@ export default function Home() {
       <Companies />
       <Courses />
       <Mentor />
-      <AboutUs />
-      <ContactUs />
+  
+      <Services />
       <Newsletter />
     </main>
   );

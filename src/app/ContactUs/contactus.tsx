@@ -69,7 +69,7 @@ const ContactUs: FC = () => {
                     </div>
 
                     <div className="card-body">
-                        <h2 className="card-title text-center text-2xl font-bold text-primary">WhatsApp</h2>
+                        <h2 className="card-title text-center text-2xl font-bold text-primary"> WhatsApp </h2>
                         <a
                             href="https://wa.me/760325720"
                             className="text-left text-base leading-relaxed"

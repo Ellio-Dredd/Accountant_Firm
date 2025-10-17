@@ -1,8 +1,8 @@
 import { HeaderItem } from "@/types/menu";
+import Link from "next/link";
 
 export const headerData: HeaderItem[] = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "/#courses" },
   { label: "Mentor", href: "/#mentor" },
   { label: "Group", href: "/#portfolio" },
   { label: "About Us", href: "/#AboutUs" },
