@@ -10,7 +10,7 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
       <Link
         href={item.href}
         onClick={item.submenu ? handleToggle : undefined}
@@ -36,7 +36,7 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
         )}
       </Link>
       {submenuOpen && item.submenu && (
-        <div className="bg-white p-2 w-full">
+        <div className=" p-2 w-full">
           {item.submenu.map((subItem, index) => (
             <Link
               key={index}

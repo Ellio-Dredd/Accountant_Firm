@@ -1,115 +1,285 @@
 "use client";
+import React from "react";
+import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { courseData } from "@/app/api/data";
-import { getImagePrefix } from "@/utils/util";
 
-const Courses = () => {
+const Services = () => {
+  const servicesData = [
+    {
+      title: "Accounting and Bookkeeping",
+      description:
+        "It is essential to record day to day transactions in a business, so that owners will be able to get understanding of progress of the business. So, we assist you to record your financial transactions using accounting software and prepare statement of profit and loss, statement of financial position and statement of cash flows.",
+      benefits: [
+        "Relevant, timely and informative financial data",
+        "A guidance for the management of cash flows",
+        "Creating a sound internal control system",
+      ],
+      imgSrc: "/images/services/accounting.svg",
+      icon: "solar:document-text-linear",
+    },
+    {
+      title: "Auditing and Assurance",
+      description:
+        "If you require third party assurance for your business records and functions, we provide independent opinion on the financial statements of the audited entity. Further this strengthens the confidence of the stakeholders.",
+      services: [
+        "Financial statement auditing",
+        "Special purpose auditing",
+        "Internal auditing",
+      ],
+      imgSrc: "/images/services/auditing.svg",
+      icon: "solar:shield-check-linear",
+    },
+    {
+      title: "Tax and Consultancy",
+      description:
+        "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way. Our team consists from well experienced and qualified members in Accounting and Taxation.",
+      imgSrc: "/images/services/tax.svg",
+      icon: "solar:calculator-linear",
+    },
+    {
+      title: "Company Secretary",
+      description:
+        "When running a company, you need to be aware of how complying with the Companies Act in Sri Lanka. We can help you by carrying out the following company secretarial duties for you.",
+      services: [
+        "Company formation",
+        "Filling of statutory forms",
+        "Preparation of all necessary documents (minutes and resolutions etc..)",
+        "Maintenance of statutory records (share register and minute book etc..)",
+        "General advise on company law in Sri Lanka",
+      ],
+      imgSrc: "/images/services/secretary.svg",
+      icon: "solar:document-linear",
+    },
+    {
+      title: "Human Resources Services",
+      description:
+        "Most important and highest expense of the business is relating to the staff. So that, we assist you to maintain documents, recording transactions and submission statutory documents.",
+      services: [
+        "Preparing of appointment letters",
+        "Register of employees for Employees Trust Fund and Employees Provident Fund",
+        "Monthly submission of EPF and ETF returns and advise on timely payments",
+        "Preparation of monthly salary",
+        "Advise clients regarding laws and regulations of prevailing labour laws in Sri Lanka",
+        "Assist for all other labour matters when necessity",
+      ],
+      imgSrc: "/images/services/hr.svg",
+      icon: "solar:users-group-rounded-linear",
+    },
+    {
+      title: "Physical Verification of Inventory",
+      description:
+        "Our firm provides independent physical verification of inventory to ensure accuracy and reliability in your financial records. We conduct detailed on-site stock counts, reconcile physical quantities with book records, and identify discrepancies to help strengthen internal controls.",
+      benefits: [
+        "Maintain transparency",
+        "Detect losses or inefficiencies",
+        "Ensure compliance with audit and regulatory requirements",
+      ],
+      imgSrc: "/images/services/inventory.svg",
+      icon: "solar:clipboard-list-linear",
+    },
+    {
+      title: "Physical Verification of Fixed Assets",
+      description:
+        "We offer comprehensive physical verification of fixed assets to ensure accurate asset records and safeguard your company's resources. Our team verifies the physical existence, condition, and location of assets, reconciles them with the fixed asset register, and identifies missing or obsolete items.",
+      benefits: [
+        "Asset management",
+        "Supports audit compliance",
+        "Ensures reliable financial reporting",
+      ],
+      imgSrc: "/images/services/assets.svg",
+      icon: "solar:building-linear",
+    },
+    {
+      title: "Other Services",
+      description:
+        "We provide a comprehensive range of additional services to support your business needs.",
+      services: [
+        "Outsourcing services of Accounting and HR functions",
+        "Property Valuation services",
+        "Prepare business proposals",
+        "Certification services for Visa and Bank Loan purposes financial statements",
+        "Registration of Sri Lanka Customs and Tourist Board",
+      ],
+      imgSrc: "/images/services/other.svg",
+      icon: "solar:settings-linear",
+    },
+  ];
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        arrows: false,
-        autoplay: true,
-        speed: 500,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            }
-        ]
-    };
-
-    const renderStars = (rating: number) => {
-        const fullStars = Math.floor(rating);
-        const halfStars = rating % 1 >= 0.5 ? 1 : 0;
-        const emptyStars = 5 - fullStars - halfStars;
-
-        return (
-            <>
-                {Array(fullStars).fill(<Icon icon="tabler:star-filled" className="text-yellow-500 text-xl inline-block" />)}
-                {halfStars > 0 && <Icon icon="tabler:star-half-filled" className="text-yellow-500 text-xl inline-block" />}
-                {Array(emptyStars).fill(<Icon icon="tabler:star-filled" className="text-gray-400 text-xl inline-block" />)}
-            </>
-        );
-    };
-
+  const NextArrow = (props: any) => {
+    const { onClick } = props;
     return (
-        <section id="courses">
-            <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
-                <div className="sm:flex justify-between items-center mb-20">
-                    <h2 className="text-midnight_text text-4xl lg:text-5xl font-semibold mb-5 sm:mb-0">Popular courses.</h2>
-                    <Link href={'/'} className="text-primary text-lg font-medium hover:tracking-widest duration-500">Explore courses&nbsp;&gt;&nbsp;</Link>
-                </div>
-                <Slider {...settings}>
-                    {courseData.map((items, i) => (
-                        <div key={i}>
-                            <div className='bg-white m-3 mb-12 px-3 pt-3 pb-12 shadow-course-shadow rounded-2xl h-full'>
-                                <div className="relative rounded-3xl">
-                                    <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="course-image" width={389} height={262} className="m-auto clipPath" />
-                                    <div className="absolute right-5 -bottom-2 bg-secondary rounded-full p-6">
-                                        <h3 className="text-white uppercase text-center text-sm font-medium">best <br /> seller</h3>
-                                    </div>
-                                </div>
-
-                                <div className="px-3 pt-6">
-                                    <Link href="#" className='text-2xl font-bold text-black max-w-75% inline-block'>{items.heading}</Link>
-                                    <h3 className='text-base font-normal pt-6 text-black/75'>{items.name}</h3>
-                                    <div className="flex justify-between items-center py-6 border-b">
-                                        <div className="flex items-center gap-4">
-                                            <h3 className="text-red-700 text-2xl font-medium">{items.rating}</h3>
-                                            <div className="flex">
-                                                {renderStars(items.rating)} {/* Dynamic stars */}
-                                            </div>
-                                        </div>
-                                        <h3 className="text-3xl font-medium">${items.price}</h3>
-                                    </div>
-                                    <div className="flex justify-between pt-6">
-                                        <div className="flex gap-4">
-                                            <Icon
-                                                icon="solar:notebook-minimalistic-outline"
-                                                className="text-primary text-xl inline-block me-2"
-                                            />
-                                            <h3 className="text-base font-medium text-black opacity-75">{items.classes} classes</h3>
-                                        </div>
-                                        <div className="flex gap-4">
-                                            <Icon
-                                                icon="solar:users-group-rounded-linear"
-                                                className="text-primary text-xl inline-block me-2"
-                                            />
-                                            <h3 className="text-base font-medium text-black opacity-75">{items.students} students</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
-            </div>
-        </section>
+      <div
+        className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
+        onClick={onClick}
+      >
+        <Icon icon="solar:arrow-right-linear" className="text-2xl text-primary" />
+      </div>
     );
-}
+  };
 
-export default Courses;
+  const PrevArrow = (props: any) => {
+    const { onClick } = props;
+    return (
+      <div
+        className="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
+        onClick={onClick}
+      >
+        <Icon icon="solar:arrow-left-linear" className="text-2xl text-primary" />
+      </div>
+    );
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false },
+      },
+    ],
+  };
+
+  return (
+    <section id="services" className="py-10 bg-gray-50">
+      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+        <h1 className="flex items-center justify-center font-medium text-3xl mb-8 text-midnight_text">Our Services</h1>
+        <Slider {...sliderSettings}>
+          {servicesData.map((service, index) => (
+            <div key={index} className="px-3 pb-10">
+              <div
+                className="bg-white rounded-2xl shadow-course-shadow hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col justify-between"
+                style={{ height: "560px" }}
+              >
+                <div className="relative h-48 flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                    <Icon icon={service.icon} className="text-white text-4xl" />
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                  <div className="absolute top-4 left-4 bg-white rounded-full p-3">
+                    <Icon icon={service.icon} className="text-primary text-2xl" />
+                  </div>
+                </div>
+
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-midnight_text mb-4 group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                      {service.description.length > 150
+                        ? `${service.description.substring(0, 150)}...`
+                        : service.description}
+                    </p>
+
+                    {service.benefits && (
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
+                          Key Benefits:
+                        </h4>
+                        <ul className="space-y-1">
+                          {service.benefits.slice(0, 2).map((benefit, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-2 text-xs text-gray-600"
+                            >
+                              <Icon
+                                icon="solar:check-circle-linear"
+                                className="text-green-500 mt-0.5 flex-shrink-0"
+                              />
+                              {benefit.length > 60
+                                ? `${benefit.substring(0, 60)}...`
+                                : benefit}
+                            </li>
+                          ))}
+                          {service.benefits.length > 2 && (
+                            <li className="text-xs text-primary font-medium">
+                              +{service.benefits.length - 2} more benefits
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
+                    {service.services && (
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-2 text-sm">
+                          Our Services:
+                        </h4>
+                        <ul className="space-y-1">
+                          {service.services.slice(0, 2).map((item, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-2 text-xs text-gray-600"
+                            >
+                              <Icon
+                                icon="solar:arrow-right-linear"
+                                className="text-primary mt-0.5 flex-shrink-0"
+                              />
+                              {item.length > 60
+                                ? `${item.substring(0, 60)}...`
+                                : item}
+                            </li>
+                          ))}
+                          {service.services.length > 2 && (
+                            <li className="text-xs text-primary font-medium">
+                              +{service.services.length - 2} more services
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-4">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300 text-sm"
+                    >
+                      Learn More
+                      <Icon icon="solar:arrow-right-linear" className="text-lg" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-300"
+          >
+            View All Services
+            <Icon icon="solar:arrow-right-linear" className="text-lg" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
