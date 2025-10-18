@@ -30,7 +30,7 @@ const footer = () => {
             </div>
           </div>
           <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Links</h3>
+            <h3 className="mb-4 text-2xl font-medium text-primary ">Links</h3>
             <ul>
               {headerData.map((item, index) => (
                 <li key={index} className="mb-2 text-black/50 hover:text-primary w-fit">
@@ -42,7 +42,7 @@ const footer = () => {
             </ul>
           </div>
           <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Other</h3>
+            <h3 className="mb-4 text-2xl font-medium text-primary ">Other</h3>
             <ul>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
                 <Link href="#">

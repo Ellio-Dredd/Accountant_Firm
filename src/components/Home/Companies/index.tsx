@@ -31,7 +31,7 @@ const Companies = () => {
         <h2 className="text-3xl md:text-4xl font-semibold text-midnight_text tracking-wide">
           Our Valued Clients
         </h2>
-        <div className="py-10 border-b border-gray-200">
+        <div className="py-10 ">
           <Slider {...settings}>
             {TruestedCompanies.map((item, i) => (
               <div key={i} className="flex justify-center items-center">

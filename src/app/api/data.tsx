@@ -164,6 +164,41 @@ export const TestimonialData: { profession: string; comment: string; imgSrc: str
     imgSrc: '/images/testimonial/user.svg',
     rating: 5
   },
+   {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+   {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
   
 ]
 export interface ServiceHome {
