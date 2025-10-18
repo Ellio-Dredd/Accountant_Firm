@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,7 +18,7 @@ const Services = () => {
         "A guidance for the management of cash flows",
         "Creating a sound internal control system",
       ],
-      imgSrc: "/images/services/accounting.svg",
+      imgSrc: "/images/services/Accounting and Bookkeeping.jpg",
       icon: "solar:document-text-linear",
     },
     {
@@ -29,14 +30,14 @@ const Services = () => {
         "Special purpose auditing",
         "Internal auditing",
       ],
-      imgSrc: "/images/services/auditing.svg",
+      imgSrc: "/images/services/Auditing and Assurance.jpg",
       icon: "solar:shield-check-linear",
     },
     {
       title: "Tax and Consultancy",
       description:
         "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way. Our team consists from well experienced and qualified members in Accounting and Taxation.",
-      imgSrc: "/images/services/tax.svg",
+      imgSrc: "/images/services/Tax and Consultancy.jpg",
       icon: "solar:calculator-linear",
     },
     {
@@ -50,7 +51,7 @@ const Services = () => {
         "Maintenance of statutory records (share register and minute book etc..)",
         "General advise on company law in Sri Lanka",
       ],
-      imgSrc: "/images/services/secretary.svg",
+      imgSrc: "/images/services/Company Secretary.jpg",
       icon: "solar:document-linear",
     },
     {
@@ -65,7 +66,7 @@ const Services = () => {
         "Advise clients regarding laws and regulations of prevailing labour laws in Sri Lanka",
         "Assist for all other labour matters when necessity",
       ],
-      imgSrc: "/images/services/hr.svg",
+      imgSrc: "/images/services/Human Resources Services.jpg",
       icon: "solar:users-group-rounded-linear",
     },
     {
@@ -77,7 +78,7 @@ const Services = () => {
         "Detect losses or inefficiencies",
         "Ensure compliance with audit and regulatory requirements",
       ],
-      imgSrc: "/images/services/inventory.svg",
+      imgSrc: "/images/services/Physical Verification of Inventory.jpg",
       icon: "solar:clipboard-list-linear",
     },
     {
@@ -89,7 +90,7 @@ const Services = () => {
         "Supports audit compliance",
         "Ensures reliable financial reporting",
       ],
-      imgSrc: "/images/services/assets.svg",
+      imgSrc: "/images/services/Physical Verification of Fixed Assets.jpg",
       icon: "solar:building-linear",
     },
     {
@@ -103,7 +104,7 @@ const Services = () => {
         "Certification services for Visa and Bank Loan purposes financial statements",
         "Registration of Sri Lanka Customs and Tourist Board",
       ],
-      imgSrc: "/images/services/other.svg",
+      imgSrc: "/images/services/Tax and Consultancy.jpg",
       icon: "solar:settings-linear",
     },
   ];
@@ -162,9 +163,9 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-10 bg-gray-50">
+    <section id="services" className="py-10 bg-white">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <h1 className="flex items-center justify-center font-medium text-3xl mb-8 text-midnight_text">Our Services</h1>
+        <h1 className="flex items-center justify-center font-semibold text-4xl mb-8 text-midnight_text">Our Services</h1>
         <Slider {...sliderSettings}>
           {servicesData.map((service, index) => (
             <div key={index} className="px-3 pb-10">
@@ -174,7 +175,12 @@ const Services = () => {
               >
                 <div className="relative h-48 flex items-center justify-center overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
-                    <Icon icon={service.icon} className="text-white text-4xl" />
+  <Image
+    src={service.imgSrc}
+    alt={service.title}
+    fill
+    className="object-cover transition-transform duration-500 group-hover:scale-105"
+  />
                   </div>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
                   <div className="absolute top-4 left-4 bg-white rounded-full p-3">
@@ -270,7 +276,7 @@ const Services = () => {
 
         <div className="text-center mt-12">
           <Link
-            href="/services"
+            href="/Services"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-300"
           >
             View All Services

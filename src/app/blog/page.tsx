@@ -72,7 +72,7 @@ export default function BlogHome() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen text-lg font-semibold text-primary">
+      <div className="flex bg-white justify-center items-center h-screen text-lg font-semibold text-gray-700">
         Loading blogs...
       </div>
     );

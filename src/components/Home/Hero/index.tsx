@@ -47,7 +47,7 @@ const Hero = () => {
                     height={30}
                     className="smallImage"
                   />
-                  <p className="text-sm sm:text-lg font-normal text-black">
+                  <p className="text-sm sm:text-sm font-normal text-black">
                     {label}
                   </p>
                 </div>

@@ -14,11 +14,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Companies />
+     
       <Courses />
+      <Companies />
       <Mentor />
       <Testimonial />
-      <Newsletter />
     </main>
   );
 }

@@ -114,7 +114,7 @@ const Header: React.FC = () => {
               aria-label="Close menu Modal"
             ></button>
           </div>
-          <nav className="flex flex-col items-start p-4">
+          <nav className="flex flex-col items-start p-4"   onFocus={() => setNavbarOpen(false)}>
             {headerData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
