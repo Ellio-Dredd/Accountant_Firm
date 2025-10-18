@@ -99,13 +99,62 @@ export const courseData: {
     },
   ]
 
-export const MentorData: { profession: string; name: string; imgSrc: string }[] = [
+// export const MentorData: { profession: string; name: string; imgSrc: string }[] = [
+//   {
+//     profession: 'Senior Accountat',
+//     name: 'Kosala Aiya',
+//     imgSrc: '/images/mentor/user3.png',
+//   },
+// ]
+
+
+export const MentorData: {
+  profession?: string;
+  name: string;
+  imgSrc: string;
+  age: string;
+  education: string;
+  experience: string;
+  position: string;
+  company: string;
+  workingPeriod: string;
+  specialization: string;
+  description: string[];
+}[] = [
   {
-    profession: 'Senior Accountat',
-    name: 'Kosala Aiya',
-    imgSrc: '/images/mentor/user3.png',
-  },
-]
+    imgSrc: "/images/mentor/user3.png",
+    name: "Kosala Nuwan",
+    age: "34",
+    education: "ACA, SAT, BSc",
+    experience: "10+ years",
+    position: "Managing Director",
+    company: "Probity Accountants",
+    workingPeriod: "2013 – Present",
+    specialization: "Accounting, Auditing, Taxation, Project Reports",
+    description: [
+      "Kosala is the Founder and Managing Director of Probity Accountants.",
+      "He has the following qualifications:",
+      "• Associate Member of Institute of Chartered Accountants of Sri Lanka",
+      "• Senior Member of Association of Accounting Technicians in Sri Lanka",
+      "• Graduate of University of Sri Jayewardenepura – B.Sc. Public Management Special",
+      "Kosala has over 10 years of accounting and auditing experience in various industries including:",
+      "• Manufacturing (Steel, Liquor, Rubber products, Poultry, and others)",
+      "• Wholesale and Retail",
+      "• Construction",
+      "• Service",
+      "• Real Estate",
+      "• Logistics and Shipping",
+      "• Financial Services",
+      "• Hotel and Restaurants",
+      "• Non-Profit Organizations",
+      "In addition, he has extensive experience and knowledge in the Taxation of Sri Lanka including direct and indirect tax compliances and tax advisory.",
+      "He has specialized in Project Report writing.",
+      "He gained experience working for top ten and Big 4 audit firms and has overseas experience working in UAE-Dubai as a financial auditor."
+    ]
+  }
+];
+
+
 
 export const TestimonialData: { profession: string; comment: string; imgSrc: string; name: string; rating: number; }[] = [
   {
