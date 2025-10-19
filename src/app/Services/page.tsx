@@ -9,7 +9,7 @@ const ServicesPage = () => {
     <section className="w-full bg-[#f7f7f7] py-16">
       <div className="container mx-auto max-w-6xl px-6">
         {/* Page Title */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-center mb-16 text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-20 mb-16 text-gray-900">
           Our Services
         </h1>
 
