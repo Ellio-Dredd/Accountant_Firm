@@ -7,7 +7,7 @@ const Logo: React.FC = () => {
     <Link href="/">
       <div className="flex flex-row gap-2">
         <Image
-        src={`${getImagePrefix()}images/logo/logo2.png`}
+        src={`/${getImagePrefix()}images/logo/logo2.png`}
         alt="accountnest-logo"
         width={0}
         height={0}
