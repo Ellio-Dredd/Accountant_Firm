@@ -266,8 +266,7 @@ export const serviceData: Service[] = [
     slug: "accounting-and-bookkeeping",
     details: [
       "It is essential to record day to day transactions in a business, so that owners will be able to get understanding of progress of the business. ",
-      "So, we assist you to record your financial transactions using accounting software and prepare statement of profit and loss,",
-      "statement of financial position and statement of cash flows. Accurate bookkeeping provides,",
+      "So, we assist you to record your financial transactions using accounting software and prepare statement of profit and loss, statement of financial position and statement of cash flows. Accurate bookkeeping provides,",
       "• Relevant, timely and informative financial data",
       "• Guidance for the management of cash flows",
       "• Creation of a sound internal control system",

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { serviceData } from "@/app/api/data";
 
@@ -39,7 +38,7 @@ const ServicesPage = () => {
 
 
               {/* Display all details */}
-              <div className="text-gray-800 leading-relaxed space-y-3">
+              <div className="text-gray-800 leading-relaxed space-y-3 text-left">
                 {service.details.map((detail, i) => (
                   <p key={i}>{detail}</p>
                 ))}

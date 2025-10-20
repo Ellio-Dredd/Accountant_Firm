@@ -104,7 +104,7 @@ const Services = () => {
         "Certification services for Visa and Bank Loan purposes financial statements",
         "Registration of Sri Lanka Customs and Tourist Board",
       ],
-      imgSrc: "/images/services/Tax and Consultancy.jpg",
+      imgSrc: "/images/services/Other Services.jpg",
       icon: "solar:settings-linear",
     },
   ];
