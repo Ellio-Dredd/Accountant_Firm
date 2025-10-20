@@ -66,20 +66,30 @@ export default function BlogHome() {
     prevArrow: <PrevArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false } }, // Hide slick arrows on mobile
     ],
   };
-
-  
 
   return (
     <div className="min-h-screen bg-gray-50 pt-20">
       <section className="py-10 bg-gray-50">
-        <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+        {/* Make container relative so absolute-positioned arrows align correctly */}
+        <div className="container relative mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
           <h1 className="flex items-center justify-center font-semibold text-3xl mb-10 text-gray-900">
             Blog Highlights
           </h1>
 
+          {/* Decorative Mobile Arrows */}
+          <div className="absolute top-1/2 left-4 right-4 flex justify-between items-center transform -translate-y-1/2 md:hidden z-10 pointer-events-none">
+            <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+              <Icon icon="solar:arrow-left-linear" className="text-primary text-2xl" />
+            </div>
+            <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+              <Icon icon="solar:arrow-right-linear" className="text-primary text-2xl" />
+            </div>
+          </div>
+
+          {/* Blog Slider */}
           <Slider {...sliderSettings}>
             {blogs.map((blog) => (
               <div key={blog.id} className="px-3 pb-10">
@@ -87,6 +97,7 @@ export default function BlogHome() {
                   className="bg-white rounded-2xl shadow-course-shadow hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col justify-between"
                   style={{ height: "520px" }}
                 >
+                  {/* Blog Image */}
                   <div className="relative h-48 flex items-center justify-center overflow-hidden">
                     {blog.image_url ? (
                       <Image
@@ -104,6 +115,7 @@ export default function BlogHome() {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
                   </div>
 
+                  {/* Blog Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
