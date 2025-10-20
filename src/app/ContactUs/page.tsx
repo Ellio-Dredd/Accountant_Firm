@@ -81,7 +81,7 @@ const ContactUs: FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="label font-semibold text-primary">First Name</label>
-                            <input type="text" className="input input-bordered w-full" placeholder="First name" />
+                            <input type="text" className="input input-bordered w-full" placeholder="First name" required/>
                         </div>
                         <div>
                             <label className="label font-semibold text-primary">Last Name</label>
@@ -92,7 +92,7 @@ const ContactUs: FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="label font-semibold text-primary">Email</label>
-                            <input type="email" className="input input-bordered w-full" placeholder="Email" />
+                            <input type="email" className="input input-bordered w-full" placeholder="Email" required/>
                         </div>
                         <div>
                             <label className="label font-semibold text-primary">Phone Number</label>
@@ -109,12 +109,12 @@ const ContactUs: FC = () => {
 
                     <div>
                         <label className="label font-semibold text-primary">Subject</label>
-                        <input type="text" className="input input-bordered w-full" placeholder="Subject" />
+                        <input type="text" className="input input-bordered w-full" placeholder="Subject" required/>
                     </div>
 
                     <div>
                         <label className="label font-semibold text-primary">Message</label>
-                        <textarea className="textarea textarea-bordered w-full" placeholder="Message"></textarea>
+                        <textarea className="textarea textarea-bordered w-full" placeholder="Message" required></textarea>
                     </div>
 
                     <button className="btn btn-primary w-full">Send Message</button>
