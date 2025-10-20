@@ -3,8 +3,10 @@ import Link from "next/link";
 
 export const headerData: HeaderItem[] = [
   { label: "Home", href: "/" },
-  { label: "Mentor", href: "/#mentor" },
-  { label: "Group", href: "/#portfolio" },
-  { label: "About Us", href: "/#AboutUs" },
-  { label: "Contact us", href: "/#contactus" },
+  { label: "Blog", href: "/blog" },
+  { label: "Tax Calculetor", href: "/#testimonial" },
+  { label: "Contact", href: "/#contactus" },
+  // { label: "Services", href: "/#services" },
+  { label: "Services", href: "/Services" },
+  { label: "Team", href: "/team"} 
 ];
