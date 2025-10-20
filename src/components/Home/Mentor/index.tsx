@@ -89,10 +89,10 @@ const Mentor = () => {
   const mentor = MentorData[0]; // Only one mentor
 
   return (
-    <section className="bg-gradient-to-r from-purple-50 via-pink-50 to-yellow-50 py-20" id="mentor">
+    <section className="bg-blue-400 py-20" id="mentor">
       <div className="container mx-auto px-4 lg:max-w-screen-lg">
-        <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center">
-          Meet Our <span className="text-pink-600">Mentor</span>
+        <h2 className="text-4xl font-semibold text-gray-900 mb-12 text-center">
+          Meet Our Team
         </h2>
 
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12 transition-transform transform hover:scale-105 duration-500">
@@ -100,7 +100,7 @@ const Mentor = () => {
             
             {/* Profile Image */}
             <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-start">
-              <div className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-72 h-64 rounded-2xl overflow-hidden ">
                 <Image
                   src={`${getImagePrefix()}${mentor.imgSrc}`}
                   alt={mentor.name}
@@ -114,13 +114,12 @@ const Mentor = () => {
             <div className="md:w-2/3 space-y-4">
               <h3 className="text-3xl font-semibold text-gray-900">{mentor.name}</h3>
               <ul className="text-gray-700 text-lg space-y-1">
-                <li>{mentor.age}</li>
-                <li>{mentor.education}</li>
-                <li>{mentor.experience}</li>
-                <li>{mentor.position}</li>
-                <li>{mentor.company}</li>
-                <li>{mentor.workingPeriod}</li>
-                <li>{mentor.specialization}</li>
+                <li><span className="font-bold">Education:{" "}</span>{mentor.education}</li>
+                <li><span className="font-bold">Experience:{" "}</span>{mentor.experience}</li>
+                <li><span className="font-bold">Position:{" "}</span>{mentor.position}</li>
+                <li><span className="font-bold">Company:{" "}</span>{mentor.company}</li>
+                <li><span className="font-bold">Working Period:{" "}</span>{mentor.workingPeriod}</li>
+                <li><span className="font-bold">Specialization:{" "}</span>{mentor.specialization}</li>
               </ul>
             </div>
           </div>

@@ -35,7 +35,10 @@ export default function BlogHome() {
         className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
         onClick={onClick}
       >
-        <Icon icon="solar:arrow-right-linear" className="text-2xl text-primary" />
+        <Icon
+          icon="solar:arrow-right-linear"
+          className="text-2xl text-primary"
+        />
       </div>
     );
   };
@@ -47,7 +50,10 @@ export default function BlogHome() {
         className="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
         onClick={onClick}
       >
-        <Icon icon="solar:arrow-left-linear" className="text-2xl text-primary" />
+        <Icon
+          icon="solar:arrow-left-linear"
+          className="text-2xl text-primary"
+        />
       </div>
     );
   };
@@ -66,13 +72,16 @@ export default function BlogHome() {
     prevArrow: <PrevArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false } },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false },
+      },
     ],
   };
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen text-lg font-semibold text-primary">
+      <div className="flex bg-white justify-center items-center h-screen text-lg font-semibold text-gray-700">
         Loading blogs...
       </div>
     );
@@ -88,6 +97,21 @@ export default function BlogHome() {
           <h1 className="flex items-center justify-center font-semibold text-3xl mb-10 text-gray-900">
             Blog Highlights
           </h1>
+
+          <div className="absolute top-1/2 left-4 right-4 flex justify-between items-center transform -translate-y-1/2 md:hidden z-10 pointer-events-none">
+            <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+              <Icon
+                icon="solar:arrow-left-linear"
+                className="text-primary text-2xl"
+              />
+            </div>
+            <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+              <Icon
+                icon="solar:arrow-right-linear"
+                className="text-primary text-2xl"
+              />
+            </div>
+          </div>
 
           <Slider {...sliderSettings}>
             {blogs.map((blog) => (
@@ -107,7 +131,10 @@ export default function BlogHome() {
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center">
-                        <Icon icon="solar:document-text-linear" className="text-white text-5xl" />
+                        <Icon
+                          icon="solar:document-text-linear"
+                          className="text-white text-5xl"
+                        />
                       </div>
                     )}
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
@@ -119,10 +146,12 @@ export default function BlogHome() {
                         {blog.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
-                        {blog.summary || blog.content?.substring(0, 150) + "..."}
+                        {blog.summary ||
+                          blog.content?.substring(0, 150) + "..."}
                       </p>
                       <p className="text-xs text-gray-500 mb-3">
-                        Published {new Date(blog.created_at || "").toLocaleDateString()}
+                        Published{" "}
+                        {new Date(blog.created_at || "").toLocaleDateString()}
                       </p>
                     </div>
 
@@ -133,7 +162,10 @@ export default function BlogHome() {
                         className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300 text-sm"
                       >
                         Read Full Post
-                        <Icon icon="solar:arrow-right-linear" className="text-lg" />
+                        <Icon
+                          icon="solar:arrow-right-linear"
+                          className="text-lg"
+                        />
                       </Link>
                     </div>
                   </div>
@@ -168,7 +200,9 @@ export default function BlogHome() {
                   className="rounded-xl mb-5 w-full object-cover max-h-96"
                 />
               )}
-              <h2 className="text-2xl font-semibold mb-3 text-primary">{blog.title}</h2>
+              <h2 className="text-2xl font-semibold mb-3 text-primary">
+                {blog.title}
+              </h2>
               <div className="text-gray-500 text-sm mb-5">
                 Published {new Date(blog.created_at || "").toLocaleDateString()}
               </div>

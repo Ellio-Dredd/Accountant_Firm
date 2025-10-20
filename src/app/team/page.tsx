@@ -66,7 +66,7 @@ export default function Team() {
   const mentor = MentorData[0]; // Assuming one primary mentor for now
 
   return (
-    <main className="min-h-screen bg-gradient-to-r from-purple-50 via-pink-50 to-yellow-50 text-gray-900">
+    <main className="min-h-screen bg-white text-gray-900">
       {/* Hero Section */}
       {/* <section className="py-15 text-center">
         <div className="container mx-auto px-4 lg:max-w-screen-md py-8">
@@ -84,15 +84,15 @@ export default function Team() {
       <section id="mentor" className="py-20">
         <div className="container mx-auto px-4 lg:max-w-screen-lg">
           <h2 className="text-5xl font-bold text-gray-900 mb-12 text-center py-10">
-            Meet Our <span className="text-pink-600">Mentor</span>
+            Meet Our <span className="text-blue-600">Team</span>
           </h2>
 
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12 transition-transform transform hover:scale-105 duration-500">
+          <div className="bg-white rounded-3xl  overflow-hidden p-8 md:p-12 transition-transform transform hover:scale-105 duration-500">
             <div className="flex flex-col md:flex-row items-start gap-8">
               
               {/* Profile Image */}
-              <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-start">
-                <div className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-lg">
+              <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-start shadow-none">
+                <div className="relative w-72 h-72 rounded-2xl overflow-hidden ">
                   <Image
                     src={`${getImagePrefix()}${mentor.imgSrc}`}
                     alt={mentor.name}

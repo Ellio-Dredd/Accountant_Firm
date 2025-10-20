@@ -164,6 +164,41 @@ export const TestimonialData: { profession: string; comment: string; imgSrc: str
     imgSrc: '/images/testimonial/user.svg',
     rating: 5
   },
+   {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+   {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
+  {
+    name: "Kosala Aiya",
+    profession: 'Accountant',
+    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
+    imgSrc: '/images/testimonial/user.svg',
+    rating: 5
+  },
   
 ]
 export interface ServiceHome {
@@ -257,7 +292,8 @@ export const serviceData: Service[] = [
     title: "Tax and Consultancy",
     slug: "tax-and-consultancy",
     details: [
-      "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way. Our team consists from well experienced and qualified members in Accounting and Taxation. This combination of knowledge can be used for the creating of maximum value to your entity.",
+      "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way.",
+      "Our team consists from well experienced and qualified members in Accounting and Taxation. This combination of knowledge can be used for the creating of maximum value to your entity.",
     ],
   },
   {
