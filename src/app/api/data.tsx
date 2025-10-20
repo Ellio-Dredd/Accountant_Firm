@@ -256,7 +256,6 @@ export interface Service {
   imgSrc: string;
   title: string;
   slug: string;
-  description: string;
   details: string[];
 }
 
@@ -265,12 +264,10 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Accounting and Bookkeeping.jpg",
     title: "Accounting and Bookkeeping",
     slug: "accounting-and-bookkeeping",
-    description:
-      "We help you record daily financial transactions accurately, providing clear insights into your business performance.",
     details: [
-      "It is essential to record day-to-day transactions in a business so that owners can understand its progress.",
-      "We assist you in recording financial transactions using accounting software and preparing the statement of profit and loss, statement of financial position, and statement of cash flows.",
-      "Accurate bookkeeping provides:",
+      "It is essential to record day to day transactions in a business, so that owners will be able to get understanding of progress of the business. ",
+      "So, we assist you to record your financial transactions using accounting software and prepare statement of profit and loss,",
+      "statement of financial position and statement of cash flows. Accurate bookkeeping provides,",
       "• Relevant, timely and informative financial data",
       "• Guidance for the management of cash flows",
       "• Creation of a sound internal control system",
@@ -280,12 +277,11 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Auditing and Assurance.jpg",
     title: "Auditing and Assurance",
     slug: "auditing-and-assurance",
-    description:
-      "We provide independent opinions on financial statements to build stakeholder confidence and ensure compliance.",
+
     details: [
-      "If you require third-party assurance for your business records and functions, we provide independent opinions on your financial statements.",
-      "This strengthens stakeholder confidence and ensures accountability.",
-      "We conduct different categories of audits according to your needs, including:",
+      "If you require third party assurance for your business records and functions, we provide independent opinion on the financial statements of the audited entity.",
+      "Further this strengthens the confidence of the stakeholders.",
+      "Different categories of audit can be conducted according to the requirement such as,",
       "• Financial statement auditing",
       "• Special purpose auditing",
       "• Internal auditing",
@@ -295,28 +291,22 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Tax and Consultancy.jpg",
     title: "Tax and Consultancy",
     slug: "tax-and-consultancy",
-    description:
-      "We help you plan and manage taxes legally to maximize profits and reduce compliance risks.",
     details: [
-      "Businesses need to pay what they owe—no more, no less.",
-      "We advise you on planning and managing all relevant taxes to maximize your profits legally.",
-      "Our team comprises well-experienced and qualified professionals in Accounting and Taxation.",
-      "This combination of knowledge allows us to create maximum value for your entity.",
+      "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way.",
+      "Our team consists from well experienced and qualified members in Accounting and Taxation. This combination of knowledge can be used for the creating of maximum value to your entity.",
     ],
   },
   {
     imgSrc: "/images/services/Company Secretary.jpg",
     title: "Company Secretary",
     slug: "company-secretary",
-    description:
-      "We ensure your company complies with Sri Lankan corporate laws and manages all secretarial documentation properly.",
     details: [
-      "When running a company, it’s important to comply with the Companies Act of Sri Lanka.",
-      "We help by carrying out the following company secretarial duties:",
+      "When running a company, you need to be aware of how complying with the Companies Act in Sri Lanka. ",
+      "We can help you by carrying out the following company secretarial duties for you.",
       "• Company formation",
       "• Filing of statutory forms",
-      "• Preparation of all necessary documents (minutes, resolutions, etc.)",
-      "• Maintenance of statutory records (share register, minute book, etc.)",
+      "• Preparation of all necessary documents ",
+      "• Maintenance of statutory records ",
       "• General advice on company law in Sri Lanka",
     ],
   },
@@ -324,12 +314,8 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Human Resources Services.jpg",
     title: "Human Resources Services",
     slug: "human-resources-services",
-    description:
-      "We support your HR and payroll processes while ensuring compliance with Sri Lankan labour laws.",
     details: [
-      "Human resources are both the most important and highest expense for a business.",
-      "We assist you in maintaining employee records, managing payroll, and handling statutory submissions.",
-      "Our services include:",
+      "Most important and highest expense of the business is relating to the staff. So that, we assist you to maintain documents, recording transactions and submission statutory documents.",
       "• Preparing appointment letters",
       "• Registering employees for EPF and ETF",
       "• Submitting monthly EPF and ETF returns and advising on timely payments",
@@ -342,11 +328,9 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Physical Verification of Inventory.jpg",
     title: "Physical Verification of Inventory",
     slug: "physical-verification-of-inventory",
-    description:
-      "We conduct independent inventory verification to ensure accuracy and reliability of stock records.",
     details: [
-      "We provide independent physical verification of inventory to ensure accuracy and reliability in your financial records.",
-      "Our team performs on-site stock counts, reconciles physical quantities with book records, and identifies discrepancies.",
+      "Our firm provides independent physical verification of inventory to ensure accuracy and reliability in your financial records. ",
+      "We conduct detailed on-site stock counts, reconcile physical quantities with book records, and identify discrepancies to help strengthen internal controls. ",
       "This service helps management maintain transparency, detect losses or inefficiencies, and ensure compliance with audit and regulatory requirements.",
     ],
   },
@@ -354,15 +338,24 @@ export const serviceData: Service[] = [
     imgSrc: "/images/services/Physical Verification of Fixed Assets.jpg",
     title: "Physical Verification of Fixed Assets",
     slug: "physical-verification-of-fixed-assets",
-    description:
-      "We verify the physical existence, condition, and records of your fixed assets to strengthen asset control and reporting.",
     details: [
-      "We offer comprehensive physical verification of fixed assets to ensure accurate asset records and safeguard company resources.",
-      "Our team verifies the existence, condition, and location of assets, reconciling them with the fixed asset register.",
-      "This service enhances:",
+      "This service helps management maintain transparency, detect losses or inefficiencies, and ensure compliance with audit and regulatory requirements.",
+      "Our team verifies the physical existence, condition, and location of assets, reconciles them with the fixed asset register, and identifies missing or obsolete items. This service enhances,",
       "• Asset management",
       "• Audit compliance",
       "• Reliable financial reporting",
+    ],
+  },
+  {
+    imgSrc: "/images/services/Other Services.jpg",
+    title: "Other Services",
+    slug: "other-services",
+    details: [
+      "• Outsourcing services of Accounting and HR functions",
+      "• Property Valuation services",
+      "• Prepare business proposals",
+      "• Certification services for Visa and Bank Loan purposes financial statements",
+      "• Registration of Sri Lanka Customs and Tourist Board",
     ],
   },
 
