@@ -11,7 +11,7 @@ const ContactUs: FC = () => {
             className="min-h-screen bg-white py-16 mt-[70px]"
         >
             <div className="container mx-auto px-4 max-w-7xl">
-                <h2 className="text-3xl font-bold text-center text-primary mb-12">
+                <h2 className="text-3xl font-bold text-center text-midnight_text mb-12">
                     Contact Us
                 </h2>
 
@@ -45,22 +45,29 @@ const ContactUs: FC = () => {
                                 href="https://wa.me/760325720"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-600 hover:underline break-all"
+                                className="hover:underline break-all"
                             >
                                 94 760 325 720
                             </a>
                         </div>
-                        <div>
+                        <div className="mb-6">
                             <h3 className="text-xl font-semibold text-primary mb-2">Follow Us</h3>
                             <a
                                 href="https://www.facebook.com/share/19jkKFShpe/?mibextid=wwXIfr"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-blue-600 hover:underline"
+                                className="flex items-center gap-2  hover:underline"
                             >
                                 <Facebook className="w-5 h-5" />
                                 Facebook
                             </a>
+                        </div>
+
+                        <div className="mb-6">
+                            <h3 className="text-xl font-semibold text-primary mb-2">Wroking hours</h3>
+                            <p>WeekDays :- 09:00 - 17:00</p>
+                            <p>Saturday :- 09:00 - 13:00</p>
+                            <p>Sunday :- Closed</p>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ const AboutUs = () => {
 
         {/* About Us */}
         <div className="bg-white shadow-lg rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-blue-600 mb-4">
+          <h2 className="text-3xl font-semibold text-center text-midnight_text mb-4">
             About Us
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -22,7 +22,7 @@ const AboutUs = () => {
 
         {/* Mission */}
         <div className="bg-white shadow-lg rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-blue-600 mb-4">
+          <h2 className="text-3xl font-semibold text-center text-midnight_text mb-4">
             Our Mission
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -35,7 +35,7 @@ const AboutUs = () => {
 
         {/* Vision */}
         <div className="bg-white shadow-lg rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-blue-600 mb-4">
+          <h2 className="text-3xl font-semibold text-center text-midnight_text mb-4">
             Our Vision
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
