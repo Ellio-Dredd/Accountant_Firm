@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { serviceData } from "@/app/api/data";
 
