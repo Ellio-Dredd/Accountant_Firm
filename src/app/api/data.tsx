@@ -1,29 +1,38 @@
-export const TruestedCompanies: { imgSrc: string }[] = [
+export const TruestedCompanies: { imgSrc: string; heading: string }[] = [
   {
-    imgSrc: "/images/companies/airbnb.svg"
+    imgSrc: "/images/companies/airbnb.svg",
+    heading: "Accounting and Bookkeeping",
   },
   {
-    imgSrc: "/images/companies/fedex.svg"
+    imgSrc: "/images/companies/fedex.svg",
+    heading: "Auditing and Assurance",
   },
   {
-    imgSrc: "/images/companies/google.svg"
+    imgSrc: "/images/companies/google.svg",
+    heading: "Tax and Consultancy",
   },
   {
-    imgSrc: "/images/companies/hubspot.svg"
+    imgSrc: "/images/companies/hubspot.svg",
+    heading: "Company Secretary",
   },
   {
-    imgSrc: "/images/companies/microsoft.svg"
+    imgSrc: "/images/companies/microsoft.svg",
+    heading: "Human Resources Services",
   },
   {
-    imgSrc: "/images/companies/walmart.svg"
+    imgSrc: "/images/companies/walmart.svg",
+    heading: "Physical Verification of Inventory",
   },
   {
-    imgSrc: "/images/companies/airbnb.svg"
+    imgSrc: "/images/companies/airbnb.svg",
+    heading: "Physical Verification of Fixed Assets",
   },
   {
-    imgSrc: "/images/companies/fedex.svg"
-  }
-]
+    imgSrc: "/images/companies/fedex.svg",
+    heading: "Other Services",
+  },
+];
+
 
 export const courseData: {
   heading: string;
@@ -92,83 +101,29 @@ export const courseData: {
 
 export const MentorData: { profession: string; name: string; imgSrc: string }[] = [
   {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
+    profession: 'Senior Accountat',
+    name: 'Kosala Aiya',
     imgSrc: '/images/mentor/user3.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user2.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user1.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user3.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user2.png',
-  },
-  {
-    profession: 'Senior UX Designer',
-    name: 'Shoo Thar Mien',
-    imgSrc: '/images/mentor/user1.png',
   },
 ]
 
 export const TestimonialData: { profession: string; comment: string; imgSrc: string; name: string; rating: number; }[] = [
   {
-    name: "Robert Fox",
-    profession: 'CEO, Parkview Int.Ltd',
+    name: "Kosala Aiya",
+    profession: 'Accountant',
     comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
     imgSrc: '/images/testimonial/user.svg',
     rating: 5
   },
-  {
-    name: "Leslie Alexander",
-    profession: 'CEO, Parkview Int.Ltd',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/mentor/user2.png',
-    rating: 5
-  },
-  {
-    name: "Cody Fisher",
-    profession: 'CEO, Parkview Int.Ltd',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/mentor/user3.png',
-    rating: 5
-  },
-  {
-    name: "Robert Fox",
-    profession: 'CEO, Parkview Int.Ltd',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/mentor/user1.png',
-    rating: 5
-  },
-  {
-    name: "Leslie Alexander",
-    profession: 'CEO, Parkview Int.Ltd',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/mentor/user2.png',
-    rating: 5
-  },
-  {
-    name: "Cody Fisher",
-    profession: 'CEO, Parkview Int.Ltd',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/mentor/user3.png',
-    rating: 5
-  },
+  
 ]
+export interface ServiceHome {
+  imgSrc: string;
+  title: string;
+  description: string;
+}
 
-export const serviceDataHome = [
+export const serviceDataHome:ServiceHome[] = [
   {
     imgSrc: "/images/services/Accounting and Bookkeeping.jpg",
     title: "Accounting and Bookkeeping",

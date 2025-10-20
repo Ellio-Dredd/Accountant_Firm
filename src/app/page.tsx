@@ -5,10 +5,10 @@ import Courses from "@/components/Home/Courses";
 import Mentor from "@/components/Home/Mentor";
 import AboutUs from "@/components/Home/AboutUs/index";
 import Newsletter from "@/components/Home/Newsletter";
-import Services from "@/components/Home/Service/index"
+import Testimonial from "@/components/Home/Testimonials/index";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "eLearning",
+  title: "Probity Accountants",
 };
 
 export default function Home() {
@@ -18,8 +18,7 @@ export default function Home() {
       <Companies />
       <Courses />
       <Mentor />
-  
-      <Services />
+      <Testimonial />
       <Newsletter />
     </main>
   );

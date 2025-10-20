@@ -8,7 +8,7 @@ const ContactUs: FC = () => {
     return (
         <section
             id="contactus"
-            className="min-h-screen flex items-center justify-center bg-base-100 py-12"
+            className="min-h-screen flex items-center justify-center bg-base-100 py-12 bg-white"
         >
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* Right: Google Map */}
@@ -24,33 +24,6 @@ const ContactUs: FC = () => {
                         className="rounded-lg shadow-md"
                     ></iframe>
                 </div>
-
-                {/* Left: Contact Form */}
-                <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-6 shadow-lg">
-                    <legend className="fieldset-legend text-lg font-semibold text-center">
-                        Contact Us via E-mail
-                    </legend>
-
-                    <label className="label text-base font-semibold text-primary">First Name</label>
-                    <input type="text" className="input input-bordered w-full" placeholder="First name" />
-
-                    <label className="label text-base font-semibold text-primary">Last Name</label>
-                    <input type="text" className="input input-bordered w-full" placeholder="Last Name" />
-
-                    <label className="label text-base font-semibold text-primary">Email</label>
-                    <input type="email" className="input input-bordered w-full" placeholder="Email" />
-
-                    <label className="label text-base font-semibold text-primary">Phone Number</label>
-                    <input type="text" className="input input-bordered w-full" placeholder="Phone number" />
-
-                    <label className="label text-base font-semibold text-primary">Subject</label>
-                    <input type="text" className="input input-bordered w-full" placeholder="Subject" />
-
-                    <label className="label text-base font-semibold text-primary">Message</label>
-                    <textarea className="textarea textarea-bordered w-full" placeholder="Message"></textarea>
-
-                    <button className="btn btn-primary mt-4 w-full">Send Message</button>
-                </fieldset>
 
                 {/* Probity Contact Details */}
                 <div className="card w-full bg-base-100 shadow-sm justify-center">
@@ -83,7 +56,7 @@ const ContactUs: FC = () => {
                     <div className="card-body">
                         <h2 className="card-title text-center text-2xl font-bold text-primary">Follow Us</h2>
                         <a
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/share/19jkKFShpe/?mibextid=wwXIfr"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-start"
@@ -92,6 +65,35 @@ const ContactUs: FC = () => {
                         </a>
                     </div>
                 </div>
+
+                {/*Contact Form */}
+                <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-6 shadow-lg justify-center items-center">
+                    <legend className="fieldset-legend text-lg font-semibold text-center">
+                        Contact Us via E-mail
+                    </legend>
+
+                    <label className="label text-base font-semibold text-primary">First Name</label>
+                    <input type="text" className="input input-bordered w-full" placeholder="First name" />
+
+                    <label className="label text-base font-semibold text-primary">Last Name</label>
+                    <input type="text" className="input input-bordered w-full" placeholder="Last Name" />
+
+                    <label className="label text-base font-semibold text-primary">Email</label>
+                    <input type="email" className="input input-bordered w-full" placeholder="Email" />
+
+                    <label className="label text-base font-semibold text-primary">Phone Number</label>
+                    <input type="tel" id="mobileNumber" className="input input-bordered w-full" name="mobileNumber" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required/>
+
+                    <label className="label text-base font-semibold text-primary">Subject</label>
+                    <input type="text" className="input input-bordered w-full" placeholder="Subject" />
+
+                    <label className="label text-base font-semibold text-primary">Message</label>
+                    <textarea className="textarea textarea-bordered w-full" placeholder="Message"></textarea>
+
+                    <button className="btn btn-primary mt-4 w-full">Send Message</button>
+                </fieldset>
+
+
             </div>
         </section>
     );

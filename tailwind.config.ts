@@ -29,25 +29,12 @@ const config: Config = {
         "75%": "75%",
       },
       backgroundImage: {
-<<<<<<< HEAD
-        "newsletter-bg": `url('/images/newsletter/bgFile.png')`,
-        "newsletter-bg-2": `url('/E-learning/images/newsletter/bgFile.png')`,
-=======
         'newsletter-bg': `url('/images/newsletter/bgFile.png')`,
         'newsletter-bg-2': `url('/images/newsletter/bgFile.png')`,
->>>>>>> 093e30dd463d6e20254b4ec015e42c35a2775317
       },
     },
   },
   plugins: [require("daisyui")],
-<<<<<<< HEAD
-
-  // Optional DaisyUI theme settings
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
-=======
->>>>>>> 093e30dd463d6e20254b4ec015e42c35a2775317
 };
 
 export default config;
