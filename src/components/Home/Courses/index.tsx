@@ -116,7 +116,10 @@ const Services = () => {
         className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
         onClick={onClick}
       >
-        <Icon icon="solar:arrow-right-linear" className="text-2xl text-primary" />
+        <Icon
+          icon="solar:arrow-right-linear"
+          className="text-2xl text-primary"
+        />
       </div>
     );
   };
@@ -128,7 +131,10 @@ const Services = () => {
         className="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg z-20 cursor-pointer hover:bg-gray-100"
         onClick={onClick}
       >
-        <Icon icon="solar:arrow-left-linear" className="text-2xl text-primary" />
+        <Icon
+          icon="solar:arrow-left-linear"
+          className="text-2xl text-primary"
+        />
       </div>
     );
   };
@@ -164,8 +170,29 @@ const Services = () => {
 
   return (
     <section id="services" className="py-10 bg-white">
-      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <h1 className="flex items-center justify-center font-semibold text-4xl mb-8 text-midnight_text">Our Services</h1>
+      {/* Make container relative for absolute arrows */}
+      <div className="container relative mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+        <h1 className="flex items-center justify-center font-semibold text-4xl mb-8 text-midnight_text">
+          Our Services
+        </h1>
+
+        {/* Decorative Mobile Arrows */}
+        <div className="absolute top-1/2 left-4 right-4 flex justify-between items-center transform -translate-y-1/2 md:hidden z-10 pointer-events-none">
+          <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+            <Icon
+              icon="solar:arrow-left-linear"
+              className="text-primary text-2xl"
+            />
+          </div>
+          <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
+            <Icon
+              icon="solar:arrow-right-linear"
+              className="text-primary text-2xl"
+            />
+          </div>
+        </div>
+
+        {/* Slider */}
         <Slider {...sliderSettings}>
           {servicesData.map((service, index) => (
             <div key={index} className="px-3 pb-10">
@@ -173,21 +200,24 @@ const Services = () => {
                 className="bg-white rounded-2xl shadow-course-shadow hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col justify-between"
                 style={{ height: "560px" }}
               >
+                {/* Image */}
                 <div className="relative h-48 flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
-  <Image
-    src={service.imgSrc}
-    alt={service.title}
-    fill
-    className="object-cover transition-transform duration-500 group-hover:scale-105"
-  />
-                  </div>
+                  <Image
+                    src={service.imgSrc}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
                   <div className="absolute top-4 left-4 bg-white rounded-full p-3">
-                    <Icon icon={service.icon} className="text-primary text-2xl" />
+                    <Icon
+                      icon={service.icon}
+                      className="text-primary text-2xl"
+                    />
                   </div>
                 </div>
 
+                {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl font-bold text-midnight_text mb-4 group-hover:text-primary transition-colors duration-300">
@@ -200,6 +230,7 @@ const Services = () => {
                         : service.description}
                     </p>
 
+                    {/* Benefits */}
                     {service.benefits && (
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-800 mb-2 text-sm">
@@ -229,6 +260,7 @@ const Services = () => {
                       </div>
                     )}
 
+                    {/* Services */}
                     {service.services && (
                       <div>
                         <h4 className="font-semibold text-gray-800 mb-2 text-sm">
@@ -265,7 +297,10 @@ const Services = () => {
                       className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300 text-sm"
                     >
                       Learn More
-                      <Icon icon="solar:arrow-right-linear" className="text-lg" />
+                      <Icon
+                        icon="solar:arrow-right-linear"
+                        className="text-lg"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -274,6 +309,7 @@ const Services = () => {
           ))}
         </Slider>
 
+        {/* View All Services */}
         <div className="text-center mt-12">
           <Link
             href="/Services"
