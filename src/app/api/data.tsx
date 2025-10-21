@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export const TruestedCompanies: { imgSrc: string; heading: string }[] = [
   {
     imgSrc: "/images/companies/airbnb.svg",
@@ -274,6 +276,7 @@ export const serviceData: Service[] = [
       "• Guidance for the management of cash flows",
       "• Creation of a sound internal control system",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Auditing and Assurance.jpg",
@@ -288,6 +291,7 @@ export const serviceData: Service[] = [
       "• Special purpose auditing",
       "• Internal auditing",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Tax and Consultancy.jpg",
@@ -297,6 +301,7 @@ export const serviceData: Service[] = [
       "The business needs to pay what they need to pay without paying higher or lower tax. So that, we advise you to planning of all relevant taxes to maximize your profits in a legal way.",
       "Our team consists from well experienced and qualified members in Accounting and Taxation. This combination of knowledge can be used for the creating of maximum value to your entity.",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Company Secretary.jpg",
@@ -311,6 +316,7 @@ export const serviceData: Service[] = [
       "• Maintenance of statutory records ",
       "• General advice on company law in Sri Lanka",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Human Resources Services.jpg",
@@ -325,6 +331,7 @@ export const serviceData: Service[] = [
       "• Advising clients on labour laws and regulations in Sri Lanka",
       "• Assisting with all other labour-related matters as needed",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Physical Verification of Inventory.jpg",
@@ -335,6 +342,7 @@ export const serviceData: Service[] = [
       "We conduct detailed on-site stock counts, reconcile physical quantities with book records, and identify discrepancies to help strengthen internal controls. ",
       "This service helps management maintain transparency, detect losses or inefficiencies, and ensure compliance with audit and regulatory requirements.",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Physical Verification of Fixed Assets.jpg",
@@ -347,6 +355,7 @@ export const serviceData: Service[] = [
       "• Audit compliance",
       "• Reliable financial reporting",
     ],
+    description: undefined
   },
   {
     imgSrc: "/images/services/Other Services.jpg",
@@ -359,6 +368,7 @@ export const serviceData: Service[] = [
       "• Certification services for Visa and Bank Loan purposes financial statements",
       "• Registration of Sri Lanka Customs and Tourist Board",
     ],
+    description: undefined
   },
 
 ];
