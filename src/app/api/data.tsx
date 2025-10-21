@@ -33,7 +33,6 @@ export const TruestedCompanies: { imgSrc: string; heading: string }[] = [
   },
 ];
 
-
 export const courseData: {
   heading: string;
   imgSrc: string;
@@ -43,61 +42,61 @@ export const courseData: {
   price: number;
   rating: number;
 }[] = [
-    {
-      heading: 'Full stack modern javascript',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/courseone.png',
-      students: 150,
-      classes: 12,
-      price: 20,
-      rating: 4.4,
-    },
-    {
-      heading: 'Design system with React programme',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/coursetwo.png',
-      students: 130,
-      classes: 12,
-      price: 20,
-      rating: 4.5,
-    },
-    {
-      heading: 'Design banner with Figma',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/coursethree.png',
-      students: 120,
-      classes: 12,
-      price: 20,
-      rating: 5,
-    },
-    {
-      heading: 'We Launch Delia Webflow this Week!',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/courseone.png',
-      students: 150,
-      classes: 12,
-      price: 20,
-      rating: 5,
-    },
-    {
-      heading: 'We Launch Delia Webflow this Week!',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/coursetwo.png',
-      students: 150,
-      classes: 12,
-      price: 20,
-      rating: 5,
-    },
-    {
-      heading: 'We Launch Delia Webflow this Week!',
-      name: "Colt stelle",
-      imgSrc: '/images/courses/coursethree.png',
-      students: 150,
-      classes: 12,
-      price: 20,
-      rating: 4.2,
-    },
-  ]
+  {
+    heading: "Full stack modern javascript",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/courseone.png",
+    students: 150,
+    classes: 12,
+    price: 20,
+    rating: 4.4,
+  },
+  {
+    heading: "Design system with React programme",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/coursetwo.png",
+    students: 130,
+    classes: 12,
+    price: 20,
+    rating: 4.5,
+  },
+  {
+    heading: "Design banner with Figma",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/coursethree.png",
+    students: 120,
+    classes: 12,
+    price: 20,
+    rating: 5,
+  },
+  {
+    heading: "We Launch Delia Webflow this Week!",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/courseone.png",
+    students: 150,
+    classes: 12,
+    price: 20,
+    rating: 5,
+  },
+  {
+    heading: "We Launch Delia Webflow this Week!",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/coursetwo.png",
+    students: 150,
+    classes: 12,
+    price: 20,
+    rating: 5,
+  },
+  {
+    heading: "We Launch Delia Webflow this Week!",
+    name: "Colt stelle",
+    imgSrc: "/images/courses/coursethree.png",
+    students: 150,
+    classes: 12,
+    price: 20,
+    rating: 4.2,
+  },
+];
 
 // export const MentorData: { profession: string; name: string; imgSrc: string }[] = [
 //   {
@@ -106,7 +105,6 @@ export const courseData: {
 //     imgSrc: '/images/mentor/user3.png',
 //   },
 // ]
-
 
 export const MentorData: {
   profession?: string;
@@ -122,7 +120,7 @@ export const MentorData: {
   description: string[];
 }[] = [
   {
-    imgSrc: "/images/mentor/user3.png",
+    imgSrc: "/images/mentor/Head.jpg",
     name: "Kosala Nuwan",
     age: "34",
     education: "ACA, SAT, BSc",
@@ -132,82 +130,89 @@ export const MentorData: {
     workingPeriod: "2013 – Present",
     specialization: "Accounting, Auditing, Taxation, Project Reports",
     description: [
-      "Kosala is the Founder and Managing Director of Probity Accountants.",
-      "He has the following qualifications:",
-      "• Associate Member of Institute of Chartered Accountants of Sri Lanka",
-      "• Senior Member of Association of Accounting Technicians in Sri Lanka",
-      "• Graduate of University of Sri Jayewardenepura – B.Sc. Public Management Special",
-      "Kosala has over 10 years of accounting and auditing experience in various industries including:",
-      "• Manufacturing (Steel, Liquor, Rubber products, Poultry, and others)",
-      "• Wholesale and Retail",
-      "• Construction",
-      "• Service",
-      "• Real Estate",
-      "• Logistics and Shipping",
-      "• Financial Services",
-      "• Hotel and Restaurants",
-      "• Non-Profit Organizations",
-      "In addition, he has extensive experience and knowledge in the Taxation of Sri Lanka including direct and indirect tax compliances and tax advisory.",
-      "He has specialized in Project Report writing.",
-      "He gained experience working for top ten and Big 4 audit firms and has overseas experience working in UAE-Dubai as a financial auditor."
-    ]
-  }
+      "Kosala is the Founder and Managing Director of Probity Accountants. He is an Associate Member of the Institute of Chartered Accountants of Sri Lanka, a Senior Member of the Association of Accounting Technicians in Sri Lanka, and a graduate of the University of Sri Jayewardenepura with a B.Sc. in Public Management (Special). With over ten years of accounting and auditing experience, Kosala has worked across a wide range of industries including manufacturing (steel, liquor, rubber products, poultry, and others), wholesale and retail, construction, service, real estate, logistics and shipping, financial services, hotel and restaurant, and non-profit organizations. He possesses extensive experience and in-depth knowledge of Sri Lankan taxation, covering both direct and indirect tax compliance as well as tax advisory. In addition, he has specialized expertise in project report writing. Kosala has also gained valuable experience working with top ten and Big 4 audit firms and has international exposure as a financial auditor in the UAE (Dubai).",
+    ],
+  },
+  {
+    imgSrc: "/images/mentor/user3.png",
+    name: "H.M. Tashini Kavindi",
+    age: "28",
+    education:
+      "B.Com, Reading MBA, CA (Corporate Level), CMA (Managerial Level)",
+    experience: "5+ years",
+    position: "Manager",
+    company: "Probity Accountants",
+    workingPeriod: "2013 – Present",
+    specialization: "Accounting, Auditing, Taxation, Project Reports",
+    description: [
+      "Tashini is the Manager – Accounts at Probity Accountants. She is a graduate of the Higher National Diploma in Accountancy (equivalent to a Bachelor of Commerce) from the Sri Lanka Institute of Advanced Technological Education. With over five years of accounting and auditing experience, she has worked across a range of industries, including manufacturing, service, hotel and restaurant, non-government organizations, and healthcare. In addition, Tashini has gained broad exposure to statutory audits, tax compliance (VAT, SVAT, SSCL), and management reporting across multiple sectors.",
+    ],
+  },
 ];
 
-
-
-export const TestimonialData: { profession: string; comment: string; imgSrc: string; name: string; rating: number; }[] = [
+export const TestimonialData: {
+  profession: string;
+  comment: string;
+  imgSrc: string;
+  name: string;
+  rating: number;
+}[] = [
   {
     name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
-  },
-   {
-    name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
-  },
-   {
-    name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
   },
   {
     name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
   },
   {
     name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
   },
   {
     name: "Kosala Aiya",
-    profession: 'Accountant',
-    comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    imgSrc: '/images/testimonial/user.svg',
-    rating: 5
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
   },
-  
-]
+  {
+    name: "Kosala Aiya",
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
+  },
+  {
+    name: "Kosala Aiya",
+    profession: "Accountant",
+    comment:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    imgSrc: "/images/testimonial/user.svg",
+    rating: 5,
+  },
+];
 export interface ServiceHome {
   imgSrc: string;
   title: string;
   description: string;
 }
 
-export const serviceDataHome:ServiceHome[] = [
+export const serviceDataHome: ServiceHome[] = [
   {
     imgSrc: "/images/services/Accounting and Bookkeeping.jpg",
     title: "Accounting and Bookkeeping",
@@ -223,8 +228,7 @@ export const serviceDataHome:ServiceHome[] = [
   {
     imgSrc: "/images/services/Tax and Consultancy.jpg",
     title: "Tax and Consultancy",
-    description:
-      "We advise on tax planning to maximize profits legally...",
+    description: "We advise on tax planning to maximize profits legally...",
   },
   {
     imgSrc: "/images/services/Company Secretary.jpg",
@@ -235,8 +239,7 @@ export const serviceDataHome:ServiceHome[] = [
   {
     imgSrc: "/images/services/Human Resources Services.jpg",
     title: "Human Resources Services",
-    description:
-      "We help maintain employee records, manage payroll...",
+    description: "We help maintain employee records, manage payroll...",
   },
   {
     imgSrc: "/images/services/Physical Verification of Inventory.jpg",
@@ -247,8 +250,7 @@ export const serviceDataHome:ServiceHome[] = [
   {
     imgSrc: "/images/services/Physical Verification of Fixed Assets.jpg",
     title: "Physical Verification of Fixed Assets",
-    description:
-      "Our team verifies the existence and condition of assets...",
+    description: "Our team verifies the existence and condition of assets...",
   },
 ];
 
@@ -359,5 +361,3 @@ export const serviceData: Service[] = [
   },
 
 ];
-
-
