@@ -1,7 +1,6 @@
 const getImagePrefix = () => {
-    return process.env.NODE_ENV === "production"
-        ? "/E-learning/"
-        : "";
+    // Return an empty string in all environments since
+    // Next.js handles absolute paths from the /public directory.
+    return "";
 };
-
 export { getImagePrefix };
