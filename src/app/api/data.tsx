@@ -255,6 +255,7 @@ export const serviceDataHome: ServiceHome[] = [
 ];
 
 export interface Service {
+  description: ReactNode;
   imgSrc: string;
   title: string;
   slug: string;
