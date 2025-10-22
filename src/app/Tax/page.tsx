@@ -1,6 +1,7 @@
 "use client";
 import React, { FC, useState } from "react";
-import { IncomeType, TaxResult } from "@/types/tax.ts";
+import { IncomeType, TaxResult } from "@/types/tax";
+
 
 const TaxCalculator: FC = () => {
   const [income, setIncome] = useState<string>("");
