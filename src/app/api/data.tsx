@@ -3,35 +3,31 @@ import { ReactNode } from "react";
 export const TruestedCompanies: { imgSrc: string; heading: string }[] = [
   {
     imgSrc: "/images/companies/airbnb.svg",
-    heading: "Accounting and Bookkeeping",
+    heading: "JOYFUL JOURNEYS FASHIONS (PVT) LTD",
   },
   {
     imgSrc: "/images/companies/fedex.svg",
-    heading: "Auditing and Assurance",
+    heading: "HOPE & HARVEST HOLIDAYS (PVT) LTD",
   },
   {
     imgSrc: "/images/companies/google.svg",
-    heading: "Tax and Consultancy",
+    heading: "THE ONE FLOWER (PVT) LTD",
   },
   {
     imgSrc: "/images/companies/hubspot.svg",
-    heading: "Company Secretary",
+    heading: "WINROSE TRAVELS (PVT) LTD",
   },
   {
     imgSrc: "/images/companies/microsoft.svg",
-    heading: "Human Resources Services",
+    heading: "SERANDIB NATURES (PVT) LTD",
   },
   {
     imgSrc: "/images/companies/walmart.svg",
-    heading: "Physical Verification of Inventory",
+    heading: "WINROSE MEGA ONLINE STORES (PVT) ",
   },
   {
     imgSrc: "/images/companies/airbnb.svg",
-    heading: "Physical Verification of Fixed Assets",
-  },
-  {
-    imgSrc: "/images/companies/fedex.svg",
-    heading: "Other Services",
+    heading: "BASNAYAKA VERMIGROW (PVT) LTD",
   },
 ];
 
@@ -136,7 +132,7 @@ export const MentorData: {
     ],
   },
   {
-    imgSrc: "/images/mentor/user3.png",
+    imgSrc: "/images/mentor/user.jpg",
     name: "H.M. Tashini Kavindi",
     age: "28",
     education:

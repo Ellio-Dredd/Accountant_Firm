@@ -2,6 +2,7 @@
 import React, { FC, useState } from "react";
 import { IncomeType, TaxResult } from "@/types/tax";
 
+
 const TaxCalculator: FC = () => {
   const [income, setIncome] = useState<string>("");
   const [type, setType] = useState<IncomeType>("monthly");
