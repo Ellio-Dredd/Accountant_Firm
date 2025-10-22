@@ -35,75 +35,12 @@ const ContactUs: FC = () => {
   };
 
   return (
-    <section id="contactus" className="w-full bg-[#f7f7f7] py-16 mt-[20px]">
+    <section id="contactus" className="w-full bg-white py-16 mt-[0px]">
       <div className="container mx-auto max-w-6xl px-6">
         {/* Page Title */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-20 mb-16 text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-0 mb-6 text-gray-900">
           Contact Us
         </h1>
-
-        {/* Top Section: Map + Info */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 mb-24">
-          {/* Left: Google Map */}
-          <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126733.83806012355!2d79.907707!3d6.958207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2583cae3e12e3%3A0x4b0b54ae82706a3!2sCity%20EDGE%20Residencies%20-%20CK%20HOMES!5e0!3m2!1sen!2sus!4v1760610485027!5m2!1sen!2sus"
-              className="w-full h-full min-h-[350px] md:min-h-[450px]"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
-          {/* Right: Contact Details */}
-          <div className="w-full lg:w-1/2 bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between">
-            <div className="space-y-6 text-gray-800 flex-1">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
-                <p>No.310, City Edge Residencies, Waragoda Road, Kelaniya</p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Contact Number</h3>
-                <p>011 299 3549</p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">WhatsApp</h3>
-                <a
-                  href="https://wa.me/760325720"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  +94 760 325 720
-                </a>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Follow Us</h3>
-                <a
-                  href="https://www.facebook.com/share/19jkKFShpe/?mibextid=wwXIfr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:underline"
-                >
-                  <Facebook className="w-5 h-5" />
-                  Facebook
-                </a>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Working Hours</h3>
-                <p>Weekdays: 09:00 – 17:00</p>
-                <p>Saturday: 09:00 – 13:00</p>
-                <p>Sunday : closed</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
 
         {/* Bottom Section: Contact Form */}
         <div className="bg-white rounded-2xl shadow-md p-8 w-full max-w-3xl mx-auto">

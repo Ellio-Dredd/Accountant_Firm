@@ -109,7 +109,7 @@ export default function BlogHome() {
               <Icon
                 icon="solar:arrow-right-linear"
                 className="text-primary text-2xl"
-              />
+              /> 
             </div>
           </div>
 

@@ -1,17 +1,39 @@
 import { serviceData } from "@/app/api/data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 interface Props {
   params: { slug: string };
 }
 
+//Generate static routes (for all services)
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return serviceData.map((service) => ({
     slug: service.slug,
   }));
 }
 
+export function generateMetadata({ params }: Props): Metadata {
+  const service = serviceData.find((s) => s.slug === params.slug);
+
+  if (!service) return {}; 
+
+  return {
+    title: String(service.title) + " | Probity Accountants",
+    description: String(service.description),
+    keywords: ["accounting", "audit", "tax", "finance"],
+    openGraph: {
+      title: String(service.title) + " | Probity Accountants",
+      description: String(service.description),
+      images: [service.imgSrc],
+      type: "website",
+    },
+  };
+}
+
+
+//  Page content
 export default function ServiceDetail({ params }: Props) {
   const service = serviceData.find((s) => s.slug === params.slug);
 

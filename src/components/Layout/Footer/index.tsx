@@ -12,17 +12,17 @@ const footer = () => {
           <div className='col-span-4 md:col-span-12 lg:col-span-4'>
             <Logo />
             <div className='flex items-center gap-4 mt-6'>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
+              <Link href="https://www.facebook.com/share/19jkKFShpe/?mibextid=wwXIfr" className='hover:text-primary text-black text-3xl'>
                 <Icon
                   icon="tabler:brand-facebook"
                 />
               </Link>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
+              <Link href="/ContactUs" className='hover:text-primary text-black text-3xl'>
                 <Icon
                   icon="tabler:brand-twitter"
                 />
               </Link>
-              <Link href="#" className='hover:text-primary text-black text-3xl'>
+              <Link href="/ContactUs" className='hover:text-primary text-black text-3xl'>
                 <Icon
                   icon="tabler:brand-instagram"
                 />
@@ -45,27 +45,22 @@ const footer = () => {
             <h3 className="mb-4 text-2xl font-medium text-primary ">Other</h3>
             <ul>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
+                <Link href="/team">
                   About Us
                 </Link>
               </li>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  Our Team
+                <Link href="/Services">
+                  Service
                 </Link>
               </li>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  career
+                <Link href="/Blog">
+                  Blog
                 </Link>
               </li>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
-                  Services
-                </Link>
-              </li>
-              <li className="mb-2 text-black/50 hover:text-primary w-fit">
-                <Link href="#">
+                <Link href="/ContactUs">
                   Contact
                 </Link>
               </li>
@@ -77,32 +72,32 @@ const footer = () => {
                 icon="tabler:brand-google-maps"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">925 Filbert Street Pennsylvania 18072</h5>
+              <h5 className="text-lg text-black/60">No.310, City Edge Residencies, Waragoda Road, Kelaniya</h5>
             </div>
             <div className="flex gap-2 mt-10">
               <Icon
                 icon="tabler:phone"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">+45 3411-4411</h5>
+              <h5 className="text-lg text-black/60">011 299 3549</h5>
             </div>
             <div className="flex gap-2 mt-10">
               <Icon
                 icon="tabler:folder"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">info@gmail.com</h5>
+              <h5 className="text-lg text-black/60">info@probityaccountants.com</h5>
             </div>
           </div>
         </div>
 
         <div className='mt-10 lg:flex items-center justify-between'>
-          <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>@2025 Agency. All Rights Reserved by <Link href="https://getnextjstemplates.com/" target="_blank" className="hover:text-primary"> GetNextJsTemplates.com</Link></h4>
+          <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>@2025 Agency. All Rights Reserved by SnackOverFlow</h4>
           <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
             <Link href="/" className='text-black/50 text-sm font-normal hover:text-primary'>Privacy policy</Link>
             <Link href="/" className='text-black/50 text-sm font-normal hover:text-primary'>Terms & conditions</Link>
           </div>
-          <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>Distributed by <Link href="https://themewagon.com/" target="_blank" className="hover:text-primary"> ThemeWagon</Link></h4>
+          <h4 className='text-black/50 text-sm text-center lg:text-start font-normal'>Distributed by SnackOverFlow </h4>
         </div>
       </div>
     </footer>
