@@ -9,24 +9,11 @@ import Service from "@/components/Home/Service";
 import ContactUs from "@/components/Home/ContactUs/page";
 import { Metadata } from "next";
 
-// ✅ This automatically adds SEO metadata for this page
+
 export const metadata: Metadata = {
-  title: "Probity Accountants | Professional Accounting Services",
+  title: "Probity Accountants",
   description: "Trusted accounting, auditing, and tax services for businesses and individuals. Empower your financial decisions with expert support.",
-  keywords: ["accounting", "bookkeeping", "audit", "finance", "tax services"],
-  openGraph: {
-    title: "Probity Accountants | Professional Accounting Services",
-    description: "Trusted accounting, auditing, and tax services for businesses and individuals.",
-    url: "https://probityaccountants.com",
-    images: [
-      {
-        url: "/images/banner/pexels-mikhail-nilov-8296990.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Accounting team discussing reports",
-      },
-    ],
-  },
+  keywords: ["accounting", "bookkeeping", "audit", "finance", "tax services"], 
 };
 
 export default function Home() {

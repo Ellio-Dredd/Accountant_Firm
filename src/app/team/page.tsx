@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import Image from "next/image";
@@ -7,17 +7,39 @@ import { getImagePrefix } from "@/utils/util";
 import AboutUs from "@/app/AboutUs/page";
 import SEO from "@/components/SEO"; 
 
+// app/team/page.js
+
+export const metadata = {
+  title: "Probity Accountants",
+  description:
+    "Meet the professional accounting experts behind Probity Accountants. Learn about their experience, education, and commitment to helping your business succeed.",
+  keywords: [
+    "accountants",
+    "accounting team",
+    "auditing professionals",
+    "finance experts",
+    "tax advisors",
+  ],
+  openGraph: {
+    title: "Our Team | Probity Accountants",
+    description:
+      "Meet the professional accounting experts behind Probity Accountants.",
+    url: "https://probityaccountants.com/team",
+    images: [
+      {
+        url: "/images/banner/pexels-mikhail-nilov-8296990.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Our team of accountants",
+      },
+    ],
+  },
+};
+
+
 export default function Team() {
   return (
     <>
- 
-      <SEO
-        title="Our Team | Probity Accountants"
-        description="Meet the professional accounting experts behind Probity Accountants. Learn about their experience, education, and commitment to helping your business succeed."
-        keywords="accountants, accounting team, auditing professionals, finance experts, tax advisors"
-        image="/images/banner/pexels-mikhail-nilov-8296990.jpg"
-        url="https://probityaccountants.com/team"
-      />
 
       <main className="min-h-screen bg-white text-gray-900">
         {/* About Us Section */}
