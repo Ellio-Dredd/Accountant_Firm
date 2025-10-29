@@ -37,8 +37,7 @@ const Hero = () => {
                       10+ Years Experience
                     </span>
                     <p className="text-blue-100 text-sm">
-                      Helping businesses with tax, audit and accounting since
-                      2015.
+                      Helping businesses with tax, audit and accounting.
                     </p>
                   </div>
                 </div>
