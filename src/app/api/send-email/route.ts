@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-export const runtime = "nodejs"; // ensure Node runtime so the Resend Node SDK works
+export const runtime = "nodejs"; // ensure Node runtime so the Resend Node SDK works ddbjad
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
