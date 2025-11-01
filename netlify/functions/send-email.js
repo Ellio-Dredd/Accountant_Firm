@@ -8,7 +8,7 @@ export async function handler(event) {
 
   try {
     await resend.emails.send({
-      from: "Probity <onboarding@resend.dev>",
+      from: "Probity <contact@probityaccountants.com>",
       to: process.env.CONTACT_RECEIVER,
       subject: `New Contact: ${subject}`,
       text: `
