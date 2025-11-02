@@ -13,8 +13,7 @@ const AboutUs = () => {
             </h2>
             <p className="text-left text-base leading-relaxed text-gray-600">
               Probity accountants is an Accounting, Auditing ,Tax Consultation
-              and Other Professional Services providing firm in Colombo and
-              Chilaw, managed by Professional Chartered Accountants and
+              and Other Professional Services providing firm in Sri Lanka, managed by Professional Chartered Accountants and
               registered auditors who are experts in all aspects of auditing,
               accounting , taxation and secretariat services. We provide a
               comprehensive range of professional services designed to support

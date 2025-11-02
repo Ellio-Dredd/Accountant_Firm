@@ -1,5 +1,6 @@
 import React from "react";
 import { signIn } from "next-auth/react";
+//d  aaaaaaaa
 
 const SocialSignUp = () => {
   return (

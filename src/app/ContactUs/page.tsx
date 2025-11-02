@@ -17,22 +17,50 @@ const ContactUs: FC = () => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("/api/send-email", {
+  //   const res = await fetch("/api/send-email", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data),
+  //   });
+
+  //   if (res.ok) {
+  //     setSent(true);
+  //     form.reset();
+  //   } else {
+  //     const { error } = await res.json();
+  //     setError(error || "Something went wrong.");
+  //   }
+
+  //   setLoading(false);
+  // };
+
+  try {
+    const res = await fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    if (res.ok) {
+    let result;
+    try {
+      result = await res.json(); // try to parse JSON
+    } catch {
+      result = {};
+    }
+
+    if (res.ok && result.success) {
       setSent(true);
       form.reset();
     } else {
-      const { error } = await res.json();
-      setError(error || "Something went wrong.");
+      setError(result.error || `Failed to send message. Status: ${res.status}`);
     }
-
+  } catch (err: any) {
+    console.error(err);
+    setError(err.message || "Something went wrong.");
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   return (
     <section id="contactus" className="w-full bg-[#f7f7f7] py-16 mt-[20px]">
