@@ -293,7 +293,7 @@ const Services = () => {
 
                   <div className="mt-4">
                     <Link
-                      href="/contact"
+                      href="/Services"
                       className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300 text-sm"
                     >
                       Learn More
