@@ -91,7 +91,7 @@ const Services = () => {
         "Ensures reliable financial reporting",
       ],
       imgSrc: "/images/services/Physical Verification of Fixed Assets.jpg",
-      icon: "solar:building-linear",
+      icon: "solar:document-linear",
     },
     {
       title: "Other Services",
