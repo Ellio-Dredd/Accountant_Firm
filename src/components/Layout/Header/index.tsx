@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-4">
 
             
-            {/* ✅ WhatsApp Icon Button */}
+            {/* WhatsApp Icon Button */}
             <Link
               href="https://wa.me/94760325720"
               target="_blank"
