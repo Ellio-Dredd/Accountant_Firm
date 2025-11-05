@@ -23,7 +23,6 @@ const ContactUs: FC = () => {
   //     body: JSON.stringify(data),
   //   });
 
-    
   //   if (res.ok) {
   //     setSent(true);
   //     form.reset();
@@ -34,8 +33,8 @@ const ContactUs: FC = () => {
 
   //   setLoading(false);
   // };
-
-    try {
+ //hello
+  try {
     const res = await fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -64,10 +63,10 @@ const ContactUs: FC = () => {
 };
 
   return (
-    <section id="contactus" className="w-full bg-white py-16 mt-[0px]">
+    <section id="contactus" className="w-full bg-[#fffdfd] py-16 mt-[0px]">
       <div className="container mx-auto max-w-6xl px-6">
         {/* Page Title */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-0 mb-6 text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-20 mb-16 text-gray-900">
           Contact Us
         </h1>
 
