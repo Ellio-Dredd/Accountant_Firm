@@ -31,16 +31,10 @@ const Header: React.FC = () => {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (
-      signInRef.current &&
-      !signInRef.current.contains(event.target as Node)
-    ) {
+    if (signInRef.current && !signInRef.current.contains(event.target as Node)) {
       setIsSignInOpen(false);
     }
-    if (
-      signUpRef.current &&
-      !signUpRef.current.contains(event.target as Node)
-    ) {
+    if (signUpRef.current && !signUpRef.current.contains(event.target as Node)) {
       setIsSignUpOpen(false);
     }
     if (
@@ -71,19 +65,37 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 bg-white bg-gradient-to-r from-indigo-50 to-violet-50 ${sticky ? " shadow-lg py-5" : "shadow-none py-6"
-        }`}
+      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 bg-white bg-gradient-to-r from-indigo-50 to-violet-50 ${
+        sticky ? "shadow-lg py-5" : "shadow-none py-6"
+      }`}
     >
       <div className="lg:py-0 py-2">
         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
           <Logo />
+
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex flex-grow items-center gap-8 justify-center">
             {headerData.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </nav>
+
+          {/* --- RIGHT SIDE ICONS --- */}
           <div className="flex items-center gap-4">
+
             
+            {/* ✅ WhatsApp Icon Button */}
+            <Link
+              href="https://wa.me/94760325720"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-300"
+              aria-label="Contact on WhatsApp"
+            >
+              <Icon icon="logos:whatsapp-icon" className="w-6 h-6" />
+            </Link>
+
+            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="block lg:hidden p-2 rounded-lg"
@@ -95,31 +107,37 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Mobile Overlay */}
         {navbarOpen && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40" />
         )}
+
+        {/* Mobile Menu */}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${navbarOpen ? "translate-x-0 bg-slate-100" : "translate-x-full bg-slate-100"
-            } z-50`}
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
+            navbarOpen
+              ? "translate-x-0 bg-slate-100"
+              : "translate-x-full bg-slate-100"
+          } z-50`}
         >
           <div className="flex items-center justify-between p-4">
-            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text">
-            </h2>
-
-            {/*  */}
+            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text"></h2>
             <button
               onClick={() => setNavbarOpen(false)}
               className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 dark:invert bg-red-500 p-3 rounded-3xl"
               aria-label="Close menu Modal"
             ></button>
           </div>
-          <nav className="flex flex-col items-start p-4"   onFocus={() => setNavbarOpen(false)}>
+
+          <nav
+            className="flex flex-col items-start p-4"
+            onFocus={() => setNavbarOpen(false)}
+          >
             {headerData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
-            <div className="mt-4 flex flex-col space-y-4 w-full">
-            </div>
           </nav>
         </div>
       </div>
