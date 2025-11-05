@@ -1,71 +1,34 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { headerData } from "../Header/Navigation/menuData";
 import Logo from "./Logo";
-import Image from "next/image";
 import HeaderLink from "../Header/Navigation/HeaderLink";
 import MobileHeaderLink from "../Header/Navigation/MobileHeaderLink";
-import Signin from "@/components/Auth/SignIn";
-import SignUp from "@/components/Auth/SignUp";
 import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Header: React.FC = () => {
   const pathUrl = usePathname();
   const { theme, setTheme } = useTheme();
-
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
-  const [isSignInOpen, setIsSignInOpen] = useState(false);
-  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
-
-  const navbarRef = useRef<HTMLDivElement>(null);
-  const signInRef = useRef<HTMLDivElement>(null);
-  const signUpRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     setSticky(window.scrollY >= 80);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (signInRef.current && !signInRef.current.contains(event.target as Node)) {
-      setIsSignInOpen(false);
-    }
-    if (signUpRef.current && !signUpRef.current.contains(event.target as Node)) {
-      setIsSignUpOpen(false);
-    }
-    if (
-      mobileMenuRef.current &&
-      !mobileMenuRef.current.contains(event.target as Node) &&
-      navbarOpen
-    ) {
-      setNavbarOpen(false);
-    }
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [navbarOpen, isSignInOpen, isSignUpOpen]);
-
-  useEffect(() => {
-    if (isSignInOpen || isSignUpOpen || navbarOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [isSignInOpen, isSignUpOpen, navbarOpen]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 bg-white bg-gradient-to-r from-indigo-50 to-violet-50 ${
+      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 bg-white bg-gradient-to-r from-indigo-200 to-violet-200 ${
         sticky ? "shadow-lg py-5" : "shadow-none py-6"
       }`}
     >
@@ -82,20 +45,24 @@ const Header: React.FC = () => {
 
           {/* --- RIGHT SIDE ICONS --- */}
           <div className="flex items-center gap-4">
-
-            
             {/* WhatsApp Icon Button */}
-            <Link
-              href="https://wa.me/94760325720"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-colors duration-300"
-              aria-label="Contact on WhatsApp"
-            >
-              <Icon icon="logos:whatsapp-icon" className="w-6 h-6" />
-            </Link>
+            <div className="relative">
+              <span className="absolute inset-0 rounded-full bg-green-400 opacity-50 animate-ping"></span>
+              <Link
+                href="https://wa.me/94760325720"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-transform duration-300 hover:scale-110 shadow-md"
+                aria-label="Contact on WhatsApp"
+              >
+                <Icon icon="logos:whatsapp-icon" className="w-6 h-6" />
+                <h1 className="hidden lg:block ml-2 font-semibold tracking-wide">
+                  +94 760 325 720
+                </h1>
+              </Link>
+            </div>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="block lg:hidden p-2 rounded-lg"
@@ -116,25 +83,23 @@ const Header: React.FC = () => {
         {/* Mobile Menu */}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
+          className={`lg:hidden fixed top-0 right-0 h-full w-full shadow-lg transform transition-transform duration-300 max-w-xs ${
             navbarOpen
               ? "translate-x-0 bg-slate-100"
               : "translate-x-full bg-slate-100"
           } z-50`}
         >
           <div className="flex items-center justify-between p-4">
-            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text"></h2>
             <button
               onClick={() => setNavbarOpen(false)}
-              className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 dark:invert bg-red-500 p-3 rounded-3xl"
-              aria-label="Close menu Modal"
-            ></button>
+              className="bg-red-500 p-3 rounded-3xl text-white"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
           </div>
 
-          <nav
-            className="flex flex-col items-start p-4"
-            onFocus={() => setNavbarOpen(false)}
-          >
+          <nav className="flex flex-col items-start p-4">
             {headerData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
