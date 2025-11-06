@@ -26,6 +26,9 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to close mobile menu
+  const closeMenu = () => setNavbarOpen(false);
+
   return (
     <header
       className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 bg-white bg-gradient-to-r from-indigo-200 to-violet-200 ${
@@ -77,7 +80,10 @@ const Header: React.FC = () => {
 
         {/* Mobile Overlay */}
         {navbarOpen && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40" />
+          <div
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40"
+            onClick={closeMenu}
+          />
         )}
 
         {/* Mobile Menu */}
@@ -91,7 +97,7 @@ const Header: React.FC = () => {
         >
           <div className="flex items-center justify-between p-4">
             <button
-              onClick={() => setNavbarOpen(false)}
+              onClick={closeMenu}
               className="bg-red-500 p-3 rounded-3xl text-white"
               aria-label="Close menu"
             >
@@ -101,7 +107,11 @@ const Header: React.FC = () => {
 
           <nav className="flex flex-col items-start p-4">
             {headerData.map((item, index) => (
-              <MobileHeaderLink key={index} item={item} />
+              <MobileHeaderLink
+                key={index}
+                item={item}
+                closeMenu={closeMenu}
+              />
             ))}
           </nav>
         </div>
