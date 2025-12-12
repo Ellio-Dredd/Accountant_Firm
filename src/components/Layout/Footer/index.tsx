@@ -72,7 +72,7 @@ const footer = () => {
                 icon="tabler:brand-google-maps"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">No.310, City Edge Residencies, Waragoda Road, Kelaniya</h5>
+              <h5 className="text-lg text-black/60">Level 35, West TowerWorld Trade Center,Colombo – 01,Sri Lanka.</h5>
             </div>
             <div className="flex gap-2 mt-10">
               <Icon
