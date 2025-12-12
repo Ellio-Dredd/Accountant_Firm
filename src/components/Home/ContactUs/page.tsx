@@ -17,28 +17,56 @@ const ContactUs: FC = () => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const res = await fetch("/api/send-email", {
+  //   const res = await fetch("/api/send-email", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data),
+  //   });
+
+  //   if (res.ok) {
+  //     setSent(true);
+  //     form.reset();
+  //   } else {
+  //     const { error } = await res.json();
+  //     setError(error || "Something went wrong.");
+  //   }
+
+  //   setLoading(false);
+  // };
+ //hello
+  try {
+    const res = await fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
-    if (res.ok) {
+    let result;
+    try {
+      result = await res.json(); // try to parse JSON
+    } catch {
+      result = {};
+    }
+
+    if (res.ok && result.success) {
       setSent(true);
       form.reset();
     } else {
-      const { error } = await res.json();
-      setError(error || "Something went wrong.");
+      setError(result.error || `Failed to send message. Status: ${res.status}`);
     }
-
+  } catch (err: any) {
+    console.error(err);
+    setError(err.message || "Something went wrong.");
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   return (
-    <section id="contactus" className="w-full bg-white py-16 mt-[0px]">
+    <section id="contactus" className="w-full bg-[#fffdfd] py-16 mt-[0px]">
       <div className="container mx-auto max-w-6xl px-6">
         {/* Page Title */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-0 mb-6 text-gray-900">
+        <h1 className="text-3xl md:text-4xl font-semibold text-center mt-20 mb-16 text-gray-900">
           Contact Us
         </h1>
 

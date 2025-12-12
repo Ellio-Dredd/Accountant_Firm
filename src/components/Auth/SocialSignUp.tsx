@@ -1,6 +1,6 @@
 import React from "react";
 import { signIn } from "next-auth/react";
-//d  aaaaaaaa
+//d  aaaaaaaa aaaa aa
 
 const SocialSignUp = () => {
   return (

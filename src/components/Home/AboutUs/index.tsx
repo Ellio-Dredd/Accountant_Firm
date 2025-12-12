@@ -13,13 +13,14 @@ const AboutUs = () => {
             </h2>
             <p className="text-left text-base leading-relaxed text-gray-600">
               Probity accountants is an Accounting, Auditing ,Tax Consultation
-              and Other Professional Services providing firm in Sri Lanka, managed by Professional Chartered Accountants and
-              registered auditors who are experts in all aspects of auditing,
-              accounting , taxation and secretariat services. We provide a
-              comprehensive range of professional services designed to support
-              your business success. We value close, trusted relationships with
-              our clients and are guided by our core principle — striving for
-              excellence in everything we do.
+              and Other Professional Services providing firm in Sri Lanka,
+              managed by Professional Chartered Accountants and registered
+              auditors who are experts in all aspects of auditing, accounting ,
+              taxation and secretariat services. We provide a comprehensive
+              range of professional services designed to support your business
+              success. We value close, trusted relationships with our clients
+              and are guided by our core principle — striving for excellence in
+              everything we do.
             </p>
           </div>
         </div>
@@ -48,12 +49,10 @@ const AboutUs = () => {
               Our Vision
             </h2>
             <p className="text-left text-base leading-relaxed text-gray-600">
-              Our mission is to deliver reliable and value-driven accounting,
-              audit, and advisory services founded on the principle of honesty.
-              We aim to build lasting relationships with clients by providing
-              accurate insights, ethical guidance, and innovative financial
-              solutions that support informed decision-making and long-term
-              success.
+              To be a trusted and leading Chartered Accountancy firm recognized
+              for integrity, professionalism, and excellence — empowering
+              businesses to achieve sustainable growth through honest and
+              transparent financial practices.
             </p>
           </div>
         </div>

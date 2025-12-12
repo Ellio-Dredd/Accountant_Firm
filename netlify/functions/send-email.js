@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY); //key
 
 export async function handler(event) {
   const body = JSON.parse(event.body);
-  const { firstName, lastName, email, subject, message } = body;
+  const { firstName, lastName, email, subject, message , phone } = body;
 
   try {
     await resend.emails.send({
@@ -14,6 +14,7 @@ export async function handler(event) {
       text: `
 Name: ${firstName} ${lastName}
 Email: ${email}
+Phone: ${phone || 'N/A'} 
 
 Message:
 ${message}

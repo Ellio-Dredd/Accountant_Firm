@@ -62,7 +62,7 @@ export default function Team() {
         <section id="mentor" className="py-20">
           <div className="container mx-auto px-4 lg:max-w-screen-lg">
             <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">
-              Meet Our <span className="text-blue-600">Team Members</span>
+              Meet Our <span className="text-blue-600">Leadership</span>
             </h2>
 
             <div className="flex flex-col space-y-20">
