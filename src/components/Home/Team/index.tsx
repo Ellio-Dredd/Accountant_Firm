@@ -10,7 +10,7 @@ const Mentor = () => {
     <section className="bg-blue-400 py-20" id="mentor">
       <div className="container mx-auto px-4 lg:max-w-screen-lg">
         <h2 className="text-4xl font-semibold text-gray-900 mb-12 text-center">
-          Meet Our Team
+          Meet Our Leadership
         </h2>
 
         {/* Mentor Grid */}
