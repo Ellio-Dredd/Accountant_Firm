@@ -90,7 +90,7 @@ const ContactUs: FC = () => {
             <div className="space-y-6 text-gray-800 flex-1">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
-                <p>Level 35,West TowerWorld Trade Center,Colombo–01,Sri Lanka.</p>
+                <p>Level 35,West TowerWorld, Trade Center,Colombo–01,Sri Lanka.</p>
               </div>
 
               <div>
