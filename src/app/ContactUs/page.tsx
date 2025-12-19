@@ -74,8 +74,9 @@ const ContactUs: FC = () => {
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 mb-24">
           {/* Left: Google Map */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex">
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9420.06647905!2d79.83443899107557!3d6.932361799222285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ab4dc561%3A0xeb35822a3ace0857!2sWorld%20Trade%20Center-%20West%20tower!5e0!3m2!1sen!2slk!4v1766116631944!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126733.83806012355!2d79.907707!3d6.958207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2583cae3e12e3%3A0x4b0b54ae82706a3!2sCity%20EDGE%20Residencies%20-%20CK%20HOMES!5e0!3m2!1sen!2sus!4v1760610485027!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9420.06647905!2d79.83443899107557!3d6.932361799222285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ab4dc561%3A0xeb35822a3ace0857!2sWorld%20Trade%20Center-%20West%20tower!5e0!3m2!1sen!2slk!4v1766116631944!5m2!1sen!2slk"
               className="w-full h-full min-h-[350px] md:min-h-[450px]"
               style={{ border: 0 }}
               allowFullScreen
