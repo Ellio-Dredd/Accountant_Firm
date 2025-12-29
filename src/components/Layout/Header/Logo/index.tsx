@@ -7,14 +7,14 @@ const Logo: React.FC = () => {
     <Link href="/">
       <div className="flex flex-row gap-2">
         <Image
-        src={`/${getImagePrefix()}images/logo/logo2.png`}
+        src={`/${getImagePrefix()}images/logo/logo200-removebg-preview (1).png`}
         alt="accountnest-logo"
         width={0}
         height={0}
         sizes="100vw"
-        style={{ width: "50px", height: "40px" ,marginTop: "2px"}}
+        style={{ width: "50px", height: "45px" ,marginTop: "2px"}}
       />
-       <div className="flex flex-col m-0 ml-2 text-gray-500 font-semibold">
+       <div className="flex flex-col m-0 ml-1 text-gray-500 font-semibold">
          <h1>Probity</h1>
           <h1>Accountants</h1>
        </div>
