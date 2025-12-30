@@ -17,50 +17,52 @@ const ContactUs: FC = () => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-  //   const res = await fetch("/api/send-email", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(data),
-  //   });
+    //   const res = await fetch("/api/send-email", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(data),
+    //   });
 
-  //   if (res.ok) {
-  //     setSent(true);
-  //     form.reset();
-  //   } else {
-  //     const { error } = await res.json();
-  //     setError(error || "Something went wrong.");
-  //   }
+    //   if (res.ok) {
+    //     setSent(true);
+    //     form.reset();
+    //   } else {
+    //     const { error } = await res.json();
+    //     setError(error || "Something went wrong.");
+    //   }
 
-  //   setLoading(false);
-  // };
- //hello
-  try {
-    const res = await fetch("/.netlify/functions/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    let result;
+    //   setLoading(false);
+    // };
+    //hello
     try {
-      result = await res.json(); // try to parse JSON
-    } catch {
-      result = {};
-    }
+      const res = await fetch("/.netlify/functions/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    if (res.ok && result.success) {
-      setSent(true);
-      form.reset();
-    } else {
-      setError(result.error || `Failed to send message. Status: ${res.status}`);
+      let result;
+      try {
+        result = await res.json(); // try to parse JSON
+      } catch {
+        result = {};
+      }
+
+      if (res.ok && result.success) {
+        setSent(true);
+        form.reset();
+      } else {
+        setError(
+          result.error || `Failed to send message. Status: ${res.status}`
+        );
+      }
+    } catch (err: any) {
+      console.error(err);
+      setError(err.message || "Something went wrong.");
+    } finally {
+      setLoading(false);
     }
-  } catch (err: any) {
-    console.error(err);
-    setError(err.message || "Something went wrong.");
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <section id="contactus" className="w-full bg-[#f7f7f7] py-16 mt-[20px]">
@@ -74,9 +76,9 @@ const ContactUs: FC = () => {
         <div className="flex flex-col lg:flex-row items-stretch justify-between gap-12 mb-24">
           {/* Left: Google Map */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex">
-          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9420.06647905!2d79.83443899107557!3d6.932361799222285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ab4dc561%3A0xeb35822a3ace0857!2sWorld%20Trade%20Center-%20West%20tower!5e0!3m2!1sen!2slk!4v1766116631944!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9420.06647905!2d79.83443899107557!3d6.932361799222285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ab4dc561%3A0xeb35822a3ace0857!2sWorld%20Trade%20Center-%20West%20tower!5e0!3m2!1sen!2slk!4v1766116631944!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9420.06647905!2d79.83443899107557!3d6.932361799222285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925ab4dc561%3A0xeb35822a3ace0857!2sWorld%20Trade%20Center-%20West%20tower!5e0!3m2!1sen!2slk!4v1766116631944!5m2!1sen!2slk"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4308239193188!2d79.90508077475742!3d6.958398493041993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2583cb1e17269%3A0xf1a2479a6d652cbf!2sF1%2FP1%2C%20City%20Edge%20Residencies%2C%20No.310%20Waragoda%20Rd!5e0!3m2!1sen!2slk!4v1767113060240!5m2!1sen!2slk"
               className="w-full h-full min-h-[350px] md:min-h-[450px]"
               style={{ border: 0 }}
               allowFullScreen
@@ -89,17 +91,31 @@ const ContactUs: FC = () => {
           <div className="w-full lg:w-1/2 bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between">
             <div className="space-y-6 text-gray-800 flex-1">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
-                <p>Level 35,West TowerWorld, Trade Center,Colombo–01,Sri Lanka.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Address
+                </h3>
+                <div className="mb-2">
+                  <p className="font-medium text-gray-800">Office 01</p>
+                  <p>Level 35, West Tower, World Trade Centre, Colombo 01</p>
+                </div>
+
+                <div>
+                  <p className="font-medium text-gray-800">Office 02</p>
+                  <p>No. 310, Waragoda Road, Kelaniya</p>
+                </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Contact Number</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Contact Number
+                </h3>
                 <p>011 299 3549</p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  WhatsApp
+                </h3>
                 <a
                   href="https://wa.me/760325720"
                   target="_blank"
@@ -111,7 +127,9 @@ const ContactUs: FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Follow Us</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Follow Us
+                </h3>
                 <a
                   href="https://www.facebook.com/share/19jkKFShpe/?mibextid=wwXIfr"
                   target="_blank"
@@ -124,7 +142,9 @@ const ContactUs: FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Working Hours</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Working Hours
+                </h3>
                 <p>Weekdays: 09:00 – 17:00</p>
                 <p>Saturday: 09:00 – 13:00</p>
                 <p>Sunday : closed</p>
@@ -132,7 +152,6 @@ const ContactUs: FC = () => {
             </div>
           </div>
         </div>
-
 
         {/* Bottom Section: Contact Form */}
         <div className="bg-white rounded-2xl shadow-md p-8 w-full max-w-3xl mx-auto">
@@ -167,7 +186,9 @@ const ContactUs: FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block font-medium text-gray-800 mb-1">Email</label>
+                <label className="block font-medium text-gray-800 mb-1">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -176,7 +197,9 @@ const ContactUs: FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-medium text-gray-800 mb-1">Phone</label>
+                <label className="block font-medium text-gray-800 mb-1">
+                  Phone
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -187,7 +210,9 @@ const ContactUs: FC = () => {
             </div>
 
             <div>
-              <label className="text-gray-900 block font-medium  mb-1">Subject</label>
+              <label className="text-gray-900 block font-medium  mb-1">
+                Subject
+              </label>
               <input
                 type="text"
                 name="subject"
@@ -197,7 +222,9 @@ const ContactUs: FC = () => {
             </div>
 
             <div>
-              <label className="block font-medium text-gray-800 mb-1">Message</label>
+              <label className="block font-medium text-gray-800 mb-1">
+                Message
+              </label>
               <textarea
                 name="message"
                 required
