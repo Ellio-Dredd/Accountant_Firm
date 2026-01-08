@@ -67,24 +67,38 @@ const footer = () => {
             </ul>
           </div>
           <div className='col-span-4 md:col-span-4 lg:col-span-4'>
-            <div className="flex items-center gap-2">
-              <Icon
+            
+            <div className="flex flex-col mb-0">
+              
+               <div className="mb-4 flex flex-row">
+                <Icon
                 icon="tabler:brand-google-maps"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">Level 35, West TowerWorld Trade Center,Colombo – 01,Sri Lanka.</h5>
+                  <p className="text-lg text-black/60">Level 35, West Tower, World Trade Centre, Colombo 01</p>
+                </div>
+
+                <div className=" flex flex-row">
+                  <Icon
+                icon="tabler:brand-google-maps"
+                className="text-primary text-2xl inline-block me-2"
+              />
+                  <p className="text-lg text-black/60">No. 310, Waragoda Road, Kelaniya</p>
+                  <p className="text-lg text-black/60"></p>
+                </div>
             </div>
-            <div className="flex gap-2 mt-10">
+            
+            <div className="flex gap-2 mt-6">
               <Icon
                 icon="tabler:phone"
-                className="text-primary text-3xl inline-block me-2"
+                className="text-primary text-2xl inline-block me-2"
               />
               <h5 className="text-lg text-black/60">076 032 5720</h5>
             </div>
-            <div className="flex gap-2 mt-10">
+            <div className="flex gap-2 mt-6">
               <Icon
                 icon="tabler:folder"
-                className="text-primary text-3xl inline-block me-2"
+                className="text-primary text-2xl inline-block me-2"
               />
               <h5 className="text-lg text-black/60">info@probityaccountants.com</h5>
             </div>
