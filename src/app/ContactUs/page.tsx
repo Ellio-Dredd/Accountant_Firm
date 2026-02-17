@@ -96,7 +96,7 @@ const ContactUs: FC = () => {
                 </h3>
                 <div className="mb-2">
                   <p className="font-medium text-gray-800">Office 01</p>
-                  <p>Level 35, West Tower, World Trade Centre, Colombo 01</p>
+                  <p>No.1097/E, Pannipitiya Road, Battaramulla, Sri Lanka</p>
                 </div>
 
                 <div>
