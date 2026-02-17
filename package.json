@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@iconify/icons-ion": "^1.2.10",
-    "@iconify/react": "^5.0.1",
+    "@iconify/react": "^5.2.1",
     "@supabase/supabase-js": "^2.75.0",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
