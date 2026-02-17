@@ -75,7 +75,7 @@ const footer = () => {
                 icon="tabler:brand-google-maps"
                 className="text-primary text-3xl inline-block me-2"
               />
-                  <p className="text-lg text-black/60">Level 35, West Tower, World Trade Centre, Colombo 01</p>
+                  <p className="text-lg text-black/60">No.1097/E, Pannipitiya Road, Battaramulla, Sri Lanka</p>
                 </div>
 
                 <div className=" flex flex-row">
